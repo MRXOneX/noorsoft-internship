@@ -1,6 +1,9 @@
 import {useFormik} from "formik";
 import firebase from 'firebase'
+import {loginEmailActions} from "../../redux/reducers/loginReducer";
+import {useDispatch} from "react-redux";
 export const FormLogin = () => {
+    const dispatch = useDispatch()
     const validateLogin = values => {
         const errors = {};
         if (!values.email) {
@@ -21,7 +24,7 @@ export const FormLogin = () => {
         },
         validateLogin,
         onSubmit: values => {
-            firebase.auth().signInWithEmailAndPassword(values.email, values.password).then()
+            dispatch(loginEmailActions.setEmailRequest(values.email, values.password))
         },
     });
     return (

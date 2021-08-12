@@ -4,7 +4,9 @@ import App from './App';
 import firebase from 'firebase'
 import {Provider} from "react-redux";
 import store from "./components/redux/store";
-firebase.initializeApp({
+import ReduxSagaFirebase from "redux-saga-firebase";
+
+export const reduxSagaFirebase = new ReduxSagaFirebase(firebase.initializeApp({
     apiKey: "AIzaSyDaGaWNkGzUS0LYPwxD7JsD2a3LQZw3veM",
     authDomain: "noorsoft-project-e95ff.firebaseapp.com",
     projectId: "noorsoft-project-e95ff",
@@ -13,7 +15,7 @@ firebase.initializeApp({
     appId: "1:884624786586:web:1f539ede55178bd8a14b23",
     measurementId: "G-YY8DHK03KK",
     databaseURL: "https://noorsoft-project-e95ff-default-rtdb.firebaseio.com/"
-})
+}))
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
