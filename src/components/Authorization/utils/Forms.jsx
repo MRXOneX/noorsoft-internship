@@ -1,4 +1,5 @@
 import {useFormik} from "formik";
+import firebase from 'firebase'
 export const FormLogin = () => {
     const validateLogin = values => {
         const errors = {};
@@ -20,7 +21,7 @@ export const FormLogin = () => {
         },
         validateLogin,
         onSubmit: values => {
-            console.log(values)
+            firebase.auth().signInWithEmailAndPassword(values.email, values.password).then()
         },
     });
     return (
