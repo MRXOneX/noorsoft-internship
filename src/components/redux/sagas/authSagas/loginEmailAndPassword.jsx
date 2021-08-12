@@ -9,7 +9,8 @@ function* loginEmail(action) {
         yield put(loginEmailActions.setEmailSuccess())
         yield put(authActions.setUserRequest())
     } catch (error) {
-        yield put(loginEmailActions.setEmailFailure(error))
+        console.log(error)
+        yield put(loginEmailActions.setEmailFailure(error.message))
     }
 }
 

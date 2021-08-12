@@ -1,9 +1,10 @@
 import {useFormik} from "formik";
 import firebase from 'firebase'
 import {loginEmailActions} from "../../redux/reducers/loginReducer";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 export const FormLogin = () => {
     const dispatch = useDispatch()
+    const {loginEmail} = useSelector(({login}) => login)
     const validateLogin = values => {
         const errors = {};
         if (!values.email) {
@@ -48,6 +49,7 @@ export const FormLogin = () => {
                 value={formikLogin.values.password}
             />
             <br/>
+            <span>{loginEmail}</span>
             <button type="submit">Войти <i className="fas fa-sign-in-alt"/></button>
         </form>
     )

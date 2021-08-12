@@ -3,7 +3,7 @@ import {call, put, takeEvery} from "redux-saga/effects";
 import {FETCH_USER_REQUEST, authActions} from "../../reducers/authReducer";
 
 function onAuthStateChanged() {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         firebase.auth().onAuthStateChanged(user => resolve(user))
     })
 }
@@ -24,7 +24,7 @@ function* authChanged() {
         }
 
     } catch (error) {
-        yield put(authActions.setUserFailure(error));
+        yield put(authActions.setUserFailure(error.message));
     }
 }
 
