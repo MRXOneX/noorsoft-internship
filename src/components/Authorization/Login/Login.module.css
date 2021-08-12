@@ -1,0 +1,21 @@
+.login {
+    position: absolute;
+    text-align: center;
+    height: 400px;
+    width: 300px;
+    left: 50%;
+    top: 50%;
+    margin: -200px 0 0 -150px;
+    display: grid;
+    grid-template-rows: 1fr 5fr 2fr 1fr;
+    grid-template-columns: 1fr;
+    background-color: white;
+    -webkit-box-shadow: 0 0 11px -5px rgba(59, 162, 242, 1);
+    -moz-box-shadow: 0 0 11px -5px rgba(59, 162, 242, 1);
+    box-shadow: 0 0 11px -5px rgba(59, 162, 242, 1);
+
+}
+/*===Block Login Name===*/
+.name hr {
+    width: 250px;
+}
