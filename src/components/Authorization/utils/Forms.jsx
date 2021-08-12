@@ -1,10 +1,24 @@
 import {useFormik} from "formik";
 export const FormLogin = () => {
+    const validateLogin = values => {
+        const errors = {};
+        if (!values.email) {
+            errors.email = 'Email должен быть введен';
+        } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+            errors.email = 'Неверное введен адрес электронной почты';
+        }
+        if (!values.password) {
+            errors.password = 'Пароль должен быть введен';
+        }
+
+        return errors;
+    };
     const formikLogin = useFormik({
         initialValues: {
             email: '',
             password: ''
         },
+        validateLogin,
         onSubmit: values => {
             console.log(values)
         },
