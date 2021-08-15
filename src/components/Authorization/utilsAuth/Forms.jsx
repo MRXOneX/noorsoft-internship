@@ -4,7 +4,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 
 import { fas } from '@fortawesome/free-solid-svg-icons'
 
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 
 import {useFormik} from "formik";
 
@@ -12,12 +12,12 @@ import firebase from 'firebase'
 
 import {loginEmailActions} from "../../redux/reducers/loginReducer";
 
+import {useLoginEmailSelector} from "../../redux/selectors";
 
 
 library.add(fas)
 export const FormLogin = () => {
     const dispatch = useDispatch()
-    const {loginEmail} = useSelector(({login}) => login)
     const validateLogin = values => {
         const errors = {};
         if (!values.email) {
@@ -62,7 +62,7 @@ export const FormLogin = () => {
                 value={formikLogin.values.password}
             />
             <br/>
-            <span>{loginEmail}</span>
+            <span>{useLoginEmailSelector()}</span>
             <button type="submit">Войти <FontAwesomeIcon icon={["fas", "sign-in-alt"]}/> </button>
         </form>
     )
