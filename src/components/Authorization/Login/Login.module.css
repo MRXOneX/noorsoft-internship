@@ -15,10 +15,6 @@
     box-shadow: 0 0 11px -5px rgba(59, 162, 242, 1);
 
 }
-/*===Block Login Name===*/
-.name hr {
-    width: 250px;
-}
 /*===Block Login Form===*/
 .form  {
     padding: 25px 5px 5px 5px;

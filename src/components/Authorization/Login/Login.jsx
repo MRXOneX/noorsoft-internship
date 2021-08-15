@@ -1,12 +1,12 @@
 import style from "./Login.module.css";
-import TitleAuth from "../utils/TitleAuth";
-import {FormLogin} from "../utils/Forms";
+import Title from "../../utils/Title";
+import {FormLogin} from "../utilsAuth/Forms";
 
 
 const Login = () => {
     return (
         <div className={style.login}>
-            <TitleAuth title='Авторизация'/>
+            <Title title='Авторизация'/>
             <div className={style.form}>
                 <FormLogin/>
             </div>
