@@ -1,10 +1,18 @@
-import {useFormik} from "formik";
-import firebase from 'firebase'
-import {loginEmailActions} from "../../redux/reducers/loginReducer";
-import {useDispatch, useSelector} from "react-redux";
-import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+
 import { fas } from '@fortawesome/free-solid-svg-icons'
+
+import {useDispatch, useSelector} from "react-redux";
+
+import {useFormik} from "formik";
+
+import firebase from 'firebase'
+
+import {loginEmailActions} from "../../redux/reducers/loginReducer";
+
+
 
 library.add(fas)
 export const FormLogin = () => {

@@ -1,10 +1,17 @@
 import React from 'react';
+
 import ReactDOM from 'react-dom';
-import App from './App';
+
 import firebase from 'firebase'
+
 import {Provider} from "react-redux";
-import store from "./components/redux/store";
+
 import ReduxSagaFirebase from "redux-saga-firebase";
+
+import App from './App';
+
+import store from "./components/redux/store";
+
 
 export const reduxSagaFirebase = new ReduxSagaFirebase(firebase.initializeApp({
     apiKey: "AIzaSyDaGaWNkGzUS0LYPwxD7JsD2a3LQZw3veM",

@@ -1,6 +1,10 @@
 import firebase from "firebase";
+
 import {call, put, takeEvery} from "redux-saga/effects";
+
 import {FETCH_USER_REQUEST, authActions} from "../../reducers/authReducer";
+
+
 
 function onAuthStateChanged() {
     return new Promise((resolve) => {

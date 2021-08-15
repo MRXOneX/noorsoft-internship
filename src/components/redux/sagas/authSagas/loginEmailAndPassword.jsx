@@ -1,7 +1,12 @@
 import {call, put, takeLatest} from "redux-saga/effects";
-import {reduxSagaFirebase} from "../../../../index";
+
 import {FETCH_EMAIL_REQUEST, loginEmailActions} from "../../reducers/loginReducer";
+
+import {reduxSagaFirebase} from "../../../../index";
+
 import {authActions} from "../../reducers/authReducer";
+
+
 
 function* loginEmail(action) {
     try {

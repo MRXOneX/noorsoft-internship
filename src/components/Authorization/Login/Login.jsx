@@ -1,6 +1,8 @@
-import style from "./Login.module.css";
-import Title from "../../utils/Title";
 import {FormLogin} from "../utilsAuth/Forms";
+
+import style from "./Login.module.css";
+
+import Title from "../../utils/Title";
 
 
 const Login = () => {
