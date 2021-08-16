@@ -10,11 +10,10 @@ import {useFormik} from "formik";
 
 import * as yup from "yup";
 
-import firebase from 'firebase'
+import {loginEmailActions} from "../../../redux/actions/loginActions";
 
-import {loginEmailActions} from "../../redux/reducers/loginReducer";
+import {useLoginEmailSelector} from "../../../redux/selectors";
 
-import {useLoginEmailSelector} from "../../redux/selectors";
 
 
 library.add(fas)

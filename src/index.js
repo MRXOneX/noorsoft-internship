@@ -10,7 +10,7 @@ import ReduxSagaFirebase from "redux-saga-firebase";
 
 import App from './App';
 
-import store from "./components/redux/store";
+import store from "./redux/store";
 
 
 export const reduxSagaFirebase = new ReduxSagaFirebase(firebase.initializeApp({

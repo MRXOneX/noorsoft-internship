@@ -1,10 +1,12 @@
 import {call, put, takeLatest} from "redux-saga/effects";
 
-import {FETCH_EMAIL_REQUEST, loginEmailActions} from "../../reducers/loginReducer";
+import {FETCH_EMAIL_REQUEST} from "../../constans/loginConstans";
 
-import {reduxSagaFirebase} from "../../../../index";
+import {loginEmailActions} from "../../actions/loginActions";
 
-import {authActions} from "../../reducers/authReducer";
+import {authActions} from "../../actions/authActions";
+
+import {reduxSagaFirebase} from "../../../index";
 
 
 
