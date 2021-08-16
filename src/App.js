@@ -10,10 +10,10 @@ import './App.css';
 
 
 function App() {
-    const dispatch = useDispatch()
     useEffect(() => {
         dispatch(authActions.setUserRequest())
     },[])
+    const dispatch = useDispatch()
     const {user} = useSelector(({auth}) => auth)
     return (
         <>

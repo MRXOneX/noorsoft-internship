@@ -8,6 +8,8 @@ import {useDispatch} from "react-redux";
 
 import {useFormik} from "formik";
 
+import * as yup from "yup";
+
 import firebase from 'firebase'
 
 import {loginEmailActions} from "../../redux/reducers/loginReducer";
@@ -18,25 +20,15 @@ import {useLoginEmailSelector} from "../../redux/selectors";
 library.add(fas)
 export const FormLogin = () => {
     const dispatch = useDispatch()
-    const validateLogin = values => {
-        const errors = {};
-        if (!values.email) {
-            errors.email = 'Email должен быть введен';
-        } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-            errors.email = 'Неверное введен адрес электронной почты';
-        }
-        if (!values.password) {
-            errors.password = 'Пароль должен быть введен';
-        }
-
-        return errors;
-    };
     const formikLogin = useFormik({
         initialValues: {
             email: '',
             password: ''
         },
-        validateLogin,
+        validationSchema: yup.object({
+            email: yup.string().email('Неверно введен электронный адрес').required('Email обязателен для ввода'),
+            password: yup.string().required(),
+        }),
         onSubmit: values => {
             dispatch(loginEmailActions.setEmailRequest(values.email, values.password))
         },
@@ -51,6 +43,7 @@ export const FormLogin = () => {
                 onChange={formikLogin.handleChange}
                 value={formikLogin.values.email}
             />
+            {formikLogin.touched.email && formikLogin.errors.email ? console.log('error: ' + formikLogin.errors.email) : console.log('good')}
             <br/>
             <label htmlFor="password">Пароль</label>
             <br/>
@@ -61,6 +54,7 @@ export const FormLogin = () => {
                 onChange={formikLogin.handleChange}
                 value={formikLogin.values.password}
             />
+            {formikLogin.touched.password && formikLogin.errors.password ? console.log('error: ' + formikLogin.errors.password) : console.log('good')}
             <br/>
             <span>{useLoginEmailSelector()}</span>
             <button type="submit">Войти <FontAwesomeIcon icon={["fas", "sign-in-alt"]}/> </button>
