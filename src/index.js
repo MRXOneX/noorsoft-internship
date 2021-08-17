@@ -14,7 +14,6 @@ import App from './App';
 
 import store from "./redux/store";
 
-console.log(process.env)
 
 export const reduxSagaFirebase = new ReduxSagaFirebase(firebase.initializeApp({
     apiKey: process.env.REACT_APP_API_KEY,

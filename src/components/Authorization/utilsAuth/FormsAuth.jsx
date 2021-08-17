@@ -57,7 +57,6 @@ export const FormLogin = () => {
             />
             {formikLogin.touched.password && formikLogin.errors.password ? console.log('error: ' + formikLogin.errors.password) : console.log('good')}
             <br/>
-            <span>{useLoginEmailSelector()}</span>
             <button type="submit">Войти <FontAwesomeIcon icon={["fas", "sign-in-alt"]}/> </button>
         </form>
     )
@@ -94,9 +93,7 @@ export const FormRegistration = () => {
                 value={formikReg.values.password}
             />
             <br/>
-            <span>{useRegistrationSelector()}</span>
             <button type="submit">Зарегистрироваться</button>
-
         </form>
     )
 }
