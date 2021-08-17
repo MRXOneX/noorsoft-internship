@@ -11,17 +11,17 @@ import ReduxSagaFirebase from "redux-saga-firebase";
 import App from './App';
 
 import store from "./redux/store";
-
+console.log(process.env)
 
 export const reduxSagaFirebase = new ReduxSagaFirebase(firebase.initializeApp({
-    apiKey: "AIzaSyDaGaWNkGzUS0LYPwxD7JsD2a3LQZw3veM",
-    authDomain: "noorsoft-project-e95ff.firebaseapp.com",
-    projectId: "noorsoft-project-e95ff",
-    storageBucket: "noorsoft-project-e95ff.appspot.com",
-    messagingSenderId: "884624786586",
-    appId: "1:884624786586:web:1f539ede55178bd8a14b23",
-    measurementId: "G-YY8DHK03KK",
-    databaseURL: "https://noorsoft-project-e95ff-default-rtdb.firebaseio.com/"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
+    measurementId: process.env.REACT_APP_MEASUREMENT_ID,
+    databaseURL: process.env.REACT_APP_DATABASE_URL
 }))
 ReactDOM.render(
   <React.StrictMode>
