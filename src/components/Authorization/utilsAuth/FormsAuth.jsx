@@ -1,8 +1,8 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
-import { library } from '@fortawesome/fontawesome-svg-core'
+import {library} from '@fortawesome/fontawesome-svg-core'
 
-import { fas } from '@fortawesome/free-solid-svg-icons'
+import {fas} from '@fortawesome/free-solid-svg-icons'
 
 import {useDispatch} from "react-redux";
 
@@ -16,8 +16,17 @@ import {loginEmailActions} from "../../../redux/actions/loginActions";
 
 import {useLoginEmailSelector, useRegistrationSelector} from "../../../redux/selectors";
 
-
-
+const validateLoginAndReg = yup.object({
+    email: yup.string()
+        .email('Неверно введен электронный адрес')
+        .required('Email обязателен для ввода'),
+    password: yup.string()
+        .required()
+        .matches(
+            "^(?=.*[A-Za-z])(?=.*d)(?=.*[@$!%*#?&])[A-Za-zd@$!%*#?&]{8,}$",
+            "Пароль должен содержать цифру, буквы в нижнем и верхнем регистре и иметь длину не менее 8 знаков"
+        ),
+})
 library.add(fas)
 export const FormLogin = () => {
     const dispatch = useDispatch()
@@ -26,10 +35,7 @@ export const FormLogin = () => {
             email: '',
             password: ''
         },
-        validationSchema: yup.object({
-            email: yup.string().email('Неверно введен электронный адрес').required('Email обязателен для ввода'),
-            password: yup.string().required(),
-        }),
+        validateLoginAndReg,
         onSubmit: values => {
             dispatch(loginEmailActions.setEmailRequest(values.email, values.password))
         },
@@ -57,7 +63,7 @@ export const FormLogin = () => {
             />
             {formikLogin.touched.password && formikLogin.errors.password ? console.log('error: ' + formikLogin.errors.password) : console.log('good')}
             <br/>
-            <button type="submit">Войти <FontAwesomeIcon icon={["fas", "sign-in-alt"]}/> </button>
+            <button type="submit">Войти <FontAwesomeIcon icon={["fas", "sign-in-alt"]}/></button>
         </form>
     )
 }
@@ -68,6 +74,7 @@ export const FormRegistration = () => {
             email: '',
             password: '',
         },
+        validateLoginAndReg,
         onSubmit: values => {
             dispatch(registrationActions.setRegistrationRequest(values.email, values.password))
         },
