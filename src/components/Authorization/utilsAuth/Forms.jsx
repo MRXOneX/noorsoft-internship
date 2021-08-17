@@ -10,9 +10,11 @@ import {useFormik} from "formik";
 
 import * as yup from "yup";
 
+import {registrationActions} from "../../../redux/actions/registrationActions";
+
 import {loginEmailActions} from "../../../redux/actions/loginActions";
 
-import {useLoginEmailSelector} from "../../../redux/selectors";
+import {useLoginEmailSelector, useRegistrationSelector} from "../../../redux/selectors";
 
 
 
@@ -57,6 +59,44 @@ export const FormLogin = () => {
             <br/>
             <span>{useLoginEmailSelector()}</span>
             <button type="submit">Войти <FontAwesomeIcon icon={["fas", "sign-in-alt"]}/> </button>
+        </form>
+    )
+}
+export const FormRegistration = () => {
+    const dispatch = useDispatch()
+    const formikReg = useFormik({
+        initialValues: {
+            email: '',
+            password: '',
+        },
+        onSubmit: values => {
+            dispatch(registrationActions.setRegistrationRequest(values.email, values.password))
+        },
+    });
+    return (
+        <form onSubmit={formikReg.handleSubmit}>
+            <label htmlFor="email">Email</label><br/>
+            <input
+                id="email"
+                name="email"
+                type="email"
+                onChange={formikReg.handleChange}
+                value={formikReg.values.email}
+            />
+            <br/>
+            <label htmlFor="password">Пароль</label>
+            <br/>
+            <input
+                id="password"
+                name="password"
+                type="password"
+                onChange={formikReg.handleChange}
+                value={formikReg.values.password}
+            />
+            <br/>
+            <span>{useRegistrationSelector()}</span>
+            <button type="submit">Зарегистрироваться</button>
+
         </form>
     )
 }

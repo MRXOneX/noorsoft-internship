@@ -8,6 +8,7 @@ import Login from "./components/Authorization/Login/Login";
 import {authActions} from "./redux/actions/authActions";
 
 import './App.css';
+import Registration from "./components/Authorization/Registration/Registation";
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
         <>
             {user ?
                 'Вы авторизованы'
-                : <Login/>
+                : <Registration />
             }
         </>
     );

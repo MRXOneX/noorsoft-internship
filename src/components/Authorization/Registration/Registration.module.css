@@ -1,4 +1,4 @@
-.login {
+.registration {
     position: absolute;
     text-align: center;
     height: 280px;
@@ -6,19 +6,20 @@
     left: 50%;
     top: 50%;
     margin: -200px 0 0 -150px;
-    display: grid;
-    grid-template-rows: 1fr 5fr 2fr 1fr;
-    grid-template-columns: 1fr;
     background-color: white;
     -webkit-box-shadow: 0 0 11px -5px rgba(59, 162, 242, 1);
     -moz-box-shadow: 0 0 11px -5px rgba(59, 162, 242, 1);
     box-shadow: 0 0 11px -5px rgba(59, 162, 242, 1);
-
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-columns: 1fr;
 }
+
 /*===Block Login Form===*/
-.form  {
+.form {
     padding: 15px 5px 5px 5px;
 }
+
 .form input {
     border: 1px solid black;
     border-radius: 5px;
@@ -26,19 +27,30 @@
     width: 70%;
     outline: none;
 }
+
+.form .errorsForm {
+    margin-top: 5px;
+}
+
+.form .errorsForm i {
+    margin-right: 3px;
+    font-size: 14px;
+}
+
 .form button {
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 25px;
     width: 70%;
     height: 30px;
     background-color: #8e74f7;
     border: none;
     outline: none;
     color: white;
-    font-size: 22px;
+    font-size: 16px;
     border-radius: 10px;
     transition: background-color .7s;
 }
+
 .form button:hover {
     background-color: #7050f2;
 }
