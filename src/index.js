@@ -11,6 +11,7 @@ import ReduxSagaFirebase from "redux-saga-firebase";
 import App from './App';
 
 import store from "./redux/store";
+
 console.log(process.env)
 
 export const reduxSagaFirebase = new ReduxSagaFirebase(firebase.initializeApp({
