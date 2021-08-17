@@ -39,7 +39,7 @@
 
 .form button {
     cursor: pointer;
-    margin-top: 25px;
+    margin-top: 15px;
     width: 70%;
     height: 30px;
     background-color: #8e74f7;
@@ -53,4 +53,22 @@
 
 .form button:hover {
     background-color: #7050f2;
+}
+/*===Block Registration with Login===*/
+.login{
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.login span {
+    width: 50%;
+    cursor: pointer;
+}
+.login a {
+    text-decoration: none;
+    color: black;
+}
+.login a:hover {
+    transition: .6s;
+    color: #baaafa;
 }

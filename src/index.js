@@ -1,12 +1,14 @@
 import React from 'react';
 
-import ReactDOM from 'react-dom';
+import ReduxSagaFirebase from "redux-saga-firebase";
 
-import firebase from 'firebase'
+import {BrowserRouter} from "react-router-dom";
 
 import {Provider} from "react-redux";
 
-import ReduxSagaFirebase from "redux-saga-firebase";
+import ReactDOM from 'react-dom';
+
+import firebase from 'firebase'
 
 import App from './App';
 
@@ -27,7 +29,9 @@ export const reduxSagaFirebase = new ReduxSagaFirebase(firebase.initializeApp({
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-        <App/>
+        <BrowserRouter>
+            <App/>
+        </BrowserRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

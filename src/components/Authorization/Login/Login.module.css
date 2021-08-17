@@ -42,3 +42,21 @@
 .form button:hover {
     background-color: #7050f2;
 }
+/*===Block Login Registration===*/
+.reg {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.reg span {
+    width: 50%;
+    cursor: pointer;
+}
+.reg a {
+    text-decoration: none;
+    color: black;
+}
+.reg a:hover {
+    transition: .6s;
+    color: #baaafa;
+}

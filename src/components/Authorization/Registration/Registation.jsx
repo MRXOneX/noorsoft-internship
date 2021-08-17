@@ -1,12 +1,26 @@
+import {Redirect} from "react-router-dom";
+
+import {FormRegistration} from "../utilsAuth/FormsAuth";
+
+import LinksAuth from "../utilsAuth/LinksAuth";
+
 import style from './Registration.module.css';
+
 import Title from "../../utils/Title";
-import {FormRegistration} from "../utilsAuth/Forms";
-const Registration = ({}) => {
+
+
+const Registration = ({user}) => {
+    if(user) {
+        return <Redirect to='/'/>
+    }
     return (
         <div className={style.registration}>
             <Title title='Регистрация'/>
             <div className={style.form}>
                 <FormRegistration />
+            </div>
+            <div className={style.login}>
+                <LinksAuth linkOne='/login' nameOne='Войти' />
             </div>
         </div>
     )
