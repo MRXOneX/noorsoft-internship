@@ -8,7 +8,7 @@ import {
 const initialState = {
     loginEmail: null,
     loginGoogle: null,
-    loginGithub: null
+    loginGithub: null,
 }
 
 const loginReducer = (state = initialState, action) => {

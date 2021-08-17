@@ -1,5 +1,7 @@
 import {all} from 'redux-saga/effects'
 
+import forgotPasswordWatch from "./authSagas/forgotPasswordSaga";
+
 import loginEmailWatch from "./authSagas/loginEmailAndPassword";
 
 import registrationWatch from "./authSagas/registrationSaga";
@@ -13,5 +15,9 @@ import loginGithubWatch from "./authSagas/loginGithubSaga";
 
 
 export default function* rootSaga() {
-    yield all([loginEmailWatch(), authChangedWatch(), registrationWatch(), loginGoogleWatch(), loginGithubWatch()])
+    yield all([
+        loginEmailWatch(), authChangedWatch(),
+        registrationWatch(), loginGoogleWatch(),
+        loginGithubWatch(), forgotPasswordWatch()
+    ])
 }

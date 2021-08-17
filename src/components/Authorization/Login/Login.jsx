@@ -47,7 +47,7 @@ const Login = ({user}) => {
                 </div>
             </div>
             <div className={style.reg}>
-                <LinksAuth linkOne='/registration' nameOne='Регистрация' />
+                <LinksAuth linkOne='/registration' linkTwo='/forgot' nameOne='Регистрация' nameTwo='Забыли пароль?'/>
             </div>
         </div>
     )

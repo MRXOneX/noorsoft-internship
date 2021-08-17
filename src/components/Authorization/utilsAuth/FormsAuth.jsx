@@ -10,11 +10,11 @@ import {useFormik} from "formik";
 
 import * as yup from "yup";
 
+import {forgotPasswordActions} from "../../../redux/actions/forgotPasswordActions";
+
 import {registrationActions} from "../../../redux/actions/registrationActions";
 
 import {loginEmailActions} from "../../../redux/actions/loginActions";
-
-import {useLoginEmailSelector, useRegistrationSelector} from "../../../redux/selectors";
 
 const validateLoginAndReg = yup.object({
     email: yup.string()
@@ -26,6 +26,11 @@ const validateLoginAndReg = yup.object({
             "^(?=.*[A-Za-z])(?=.*d)(?=.*[@$!%*#?&])[A-Za-zd@$!%*#?&]{8,}$",
             "Пароль должен содержать цифру, буквы в нижнем и верхнем регистре и иметь длину не менее 8 знаков"
         ),
+})
+const validateForgot = yup.object({
+    email: yup.string()
+        .email('Неверно введен электронный адрес')
+        .required('Email обязателен для ввода'),
 })
 library.add(fas)
 export const FormLogin = () => {
@@ -101,6 +106,31 @@ export const FormRegistration = () => {
             />
             <br/>
             <button type="submit">Зарегистрироваться</button>
+        </form>
+    )
+}
+export const FormForgot = ({dispatch}) => {
+    const formikForgot = useFormik({
+        initialValues: {
+            email: ''
+        },
+        validateForgot,
+        onSubmit: values => {
+            dispatch(forgotPasswordActions.forgotPasswordRequest(values.email))
+        },
+    });
+    return (
+        <form onSubmit={formikForgot.handleSubmit}>
+            <label htmlFor="email">Email</label><br/>
+            <input
+                id="email"
+                name="email"
+                type="email"
+                onChange={formikForgot.handleChange}
+                value={formikForgot.values.email}
+            />
+            <button type="submit">Восстановить</button>
+
         </form>
     )
 }
