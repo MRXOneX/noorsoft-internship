@@ -1,14 +1,10 @@
 .login {
-    position: absolute;
     text-align: center;
-    height: 360px;
+    height: auto;
     width: 300px;
-    left: 50%;
-    top: 50%;
-    margin: -200px 0 0 -150px;
-    display: grid;
-    grid-template-rows: 1fr 5fr 2fr 1fr;
-    grid-template-columns: 1fr;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
     background-color: white;
     -webkit-box-shadow: 0 0 11px -5px rgba(59, 162, 242, 1);
     -moz-box-shadow: 0 0 11px -5px rgba(59, 162, 242, 1);
@@ -17,30 +13,19 @@
 }
 /*===Block Login Form===*/
 .form  {
-    padding: 15px 5px 5px 5px;
+    padding: 5px  0 0 0;
 }
 .form input {
-    border: 1px solid black;
+    margin: 0 auto;
     border-radius: 5px;
-    padding: 5px;
     width: 70%;
     outline: none;
 }
 .form button {
-    cursor: pointer;
-    margin-top: 15px;
-    width: 70%;
-    height: 30px;
-    background-color: #8e74f7;
-    border: none;
-    outline: none;
-    color: white;
+    padding: 0;
+    margin: 20px 0 10px 0;
     font-size: 22px;
-    border-radius: 10px;
-    transition: background-color .7s;
-}
-.form button:hover {
-    background-color: #7050f2;
+    width: 70%;
 }
 /*===Block Login Through===*/
 .loginThrough {
@@ -69,21 +54,21 @@
 .loginThrough div span p i{
     font-size: 25px;
 }
-/*===Block Login Registration===*/
-.reg {
-    padding: 0 10px;
+/*===Block Login Registration And Forgot===*/
+.regAndForgot {
+    padding: 5px 10px;
     display: flex;
     justify-content: space-between;
 }
-.reg span {
+.regAndForgot span {
     width: 50%;
     cursor: pointer;
 }
-.reg a {
+.regAndForgot a {
     text-decoration: none;
     color: black;
 }
-.reg a:hover {
+.regAndForgot a:hover {
     transition: .6s;
     color: #baaafa;
 }

@@ -19,6 +19,7 @@ import style from "./Login.module.css";
 import Title from "../../utils/Title";
 
 
+
 library.add(fab)
 const Login = ({user}) => {
     const dispatch = useDispatch()
@@ -37,7 +38,6 @@ const Login = ({user}) => {
             <div className={style.form}>
                 <FormLogin/>
             </div>
-
             <div className={style.loginThrough}>
                 <div>
                     <button onClick={loginGithub}><span><p><FontAwesomeIcon icon={["fab", "github"]} size='2x'/></p>Войти через GitHub</span></button>
@@ -46,7 +46,7 @@ const Login = ({user}) => {
                     <button onClick={loginGoogle}><span><p><FontAwesomeIcon icon={["fab", "google"]} size='2x'/></p>Войти через Google</span></button>
                 </div>
             </div>
-            <div className={style.reg}>
+            <div className={style.regAndForgot}>
                 <LinksAuth linkOne='/registration' linkTwo='/forgot' nameOne='Регистрация' nameTwo='Забыли пароль?'/>
             </div>
         </div>

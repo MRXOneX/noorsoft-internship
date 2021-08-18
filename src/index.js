@@ -4,6 +4,8 @@ import ReduxSagaFirebase from "redux-saga-firebase";
 
 import {BrowserRouter} from "react-router-dom";
 
+import 'bootstrap/dist/css/bootstrap.css';
+
 import {Provider} from "react-redux";
 
 import ReactDOM from 'react-dom';

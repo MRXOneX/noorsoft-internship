@@ -19,7 +19,7 @@ const Registration = ({user}) => {
             <div className={style.form}>
                 <FormRegistration />
             </div>
-            <div className={style.login}>
+            <div className={style.loginAndForgot}>
                 <LinksAuth linkOne='/login' linkTwo='/forgot' nameOne='Войти' nameTwo='Забыли пароль?'/>
             </div>
         </div>
