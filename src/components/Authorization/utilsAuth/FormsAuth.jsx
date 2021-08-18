@@ -135,3 +135,36 @@ export const FormForgot = ({dispatch}) => {
         </form>
     )
 }
+export const FormUpdate = () => {
+    const dispatch = useDispatch()
+    const formikUpdate = useFormik({
+        initialValues: {
+            email: ''
+        },
+        validatePassword: yup.object({
+            password: yup.string()
+                .required()
+                .matches(
+                    "^(?=.*[A-Za-z])(?=.*d)(?=.*[@$!%*#?&])[A-Za-zd@$!%*#?&]{8,}$",
+                    "Пароль должен содержать цифру, буквы в нижнем и верхнем регистре и иметь длину не менее 8 знаков"
+                ),
+        }),
+        onSubmit: values => {
+            dispatch(forgotPasswordActions.forgotPasswordRequest(values.email))
+        },
+    });
+    return (
+        <form onSubmit={formikUpdate.handleSubmit}>
+            <label htmlFor="email">Новый пароль</label><br/>
+            <Input
+                id="password"
+                name="password"
+                type="password"
+                placeholder='Введите свой пароль'
+                onChange={formikUpdate.handleChange}
+                value={formikUpdate.values.email}
+            />
+            <Button color="primary">Обновить пароль</Button>
+        </form>
+    )
+}

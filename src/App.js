@@ -8,6 +8,8 @@ import {Route, Switch} from "react-router-dom";
 
 import {useEffect} from "react";
 
+import UpdatePassword from "./components/Authorization/UpdatePassword/UpdatePassword";
+
 import ForgotPassword from "./components/Authorization/ForgotPassword/ForgotPassword";
 
 import Registration from "./components/Authorization/Registration/Registation";
@@ -31,6 +33,7 @@ function App() {
                 <Route path='/login' render={() => <Login user={user}/>}/>
                 <Route path='/registration' render={() => <Registration user={user}/>}/>
                 <Route path='/forgot' render={() => <ForgotPassword user={user}/>}/>
+                <Route path='/update/:link' render={() => <UpdatePassword />} />
                 <Route exact path='/' render={() => 'вы авторизованы'}/>
             </Switch>
         </>
