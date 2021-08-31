@@ -28,7 +28,7 @@ const Login = ({ user }) => {
 
   return (
     <div className={style.login}>
-      <Title title="Авторизация" />
+      <Title title="Авторизация" showHr={true} />
       <div className={style.form}>
         <FormLogin />
       </div>

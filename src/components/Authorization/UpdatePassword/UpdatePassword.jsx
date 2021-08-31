@@ -10,7 +10,7 @@ const UpdatePassword = () => {
 
   return (
     <div className={style.update}>
-      <Title title="Обновить пароль" />
+      <Title title="Обновить пароль" showHr={true} />
       <div className={style.form}>
         <FormUpdate code={code} />
       </div>

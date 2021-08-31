@@ -11,7 +11,7 @@ const ForgotPassword = ({ user }) => {
 
   return (
     <div className={style.forgotPassword}>
-      <Title title="Забыли пароль" />
+      <Title title="Забыли пароль" showHr={true} />
       <div className={style.form}>
         <FormForgot />
       </div>

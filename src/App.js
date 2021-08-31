@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import { Route, Router, Switch } from "react-router-dom";
 import { useEffect } from "react";
@@ -7,6 +7,7 @@ import UpdatePassword from "./components/Authorization/UpdatePassword/UpdatePass
 import ForgotPassword from "./components/Authorization/ForgotPassword/ForgotPassword";
 import Registration from "./components/Authorization/Registration/Registation";
 import Login from "./components/Authorization/Login/Login";
+import Communication from "./components/Communication/Communication";
 import { authActions } from "./redux/actions/authorizationActions/authActions";
 import { useUserSelector } from "./redux/selectors";
 import history from "./history";
@@ -46,7 +47,7 @@ function App() {
             render={() => <ForgotPassword user={user} />}
           />
           <Route path="/update_password" render={() => <UpdatePassword />} />
-          <Route exact path="/" render={() => "вы авторизованы"} />
+          <Route path="/" render={() => <Communication user={user} />} />
         </Switch>
       </Router>
     </>

@@ -1,6 +1,8 @@
 import React from "react";
 import ReduxSagaFirebase from "redux-saga-firebase";
 import { BrowserRouter } from "react-router-dom";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
 import { Provider } from "react-redux";
 import ReactDOM from "react-dom";
 import firebase from "firebase";
@@ -9,6 +11,8 @@ import App from "./App";
 import store from "./redux/store";
 
 import "bootstrap/dist/css/bootstrap.css";
+
+library.add(fas);
 
 export const reduxSagaFirebase = new ReduxSagaFirebase(
   firebase.initializeApp({

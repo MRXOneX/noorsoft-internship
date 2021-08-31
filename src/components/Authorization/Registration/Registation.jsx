@@ -11,7 +11,7 @@ const Registration = ({ user }) => {
 
   return (
     <div className={style.registration}>
-      <Title title="Регистрация" />
+      <Title title="Регистрация" showHr={true} />
       <div className={style.form}>
         <FormRegistration />
       </div>
