@@ -9,9 +9,7 @@ import Title from "../../utils/Title";
 import style from "./Registration.module.css";
 
 const Registration = ({ user }) => {
-  if (user) {
-    return <Redirect to="/" />;
-  }
+  if (user) return <Redirect to="/" />;
 
   return (
     <div className={style.registration}>

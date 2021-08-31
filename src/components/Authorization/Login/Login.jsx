@@ -24,9 +24,8 @@ import style from "./Login.module.css";
 library.add(fab);
 const Login = ({ user }) => {
   const dispatch = useDispatch();
-  if (user) {
-    return <Redirect to="/" />;
-  }
+  if (user) return <Redirect to="/" />;
+
   const loginGoogle = async () => {
     dispatch(loginGoogleActions.setGoogleRequest());
   };

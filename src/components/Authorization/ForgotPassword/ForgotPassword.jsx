@@ -12,9 +12,7 @@ import style from "./ForgotPassword.module.css";
 
 const ForgotPassword = ({ user }) => {
   const dispatch = useDispatch();
-  if (user) {
-    return <Redirect to="/" />;
-  }
+  if (user) return <Redirect to="/" />;
 
   return (
     <div className={style.forgotPassword}>
