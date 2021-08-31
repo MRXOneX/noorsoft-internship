@@ -1,0 +1,54 @@
+.main {
+    background-color: #6C69FF;
+    color: white;
+    width:270px;
+    min-height: 100px;
+    max-height: 450px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.header {
+    position: relative;
+    margin: 10px auto;
+    width: 92%;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.headerBtn {
+    cursor: pointer;
+    font-size: 20px;
+    height: 25px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #6C69FF;
+}
+.opacity1 {
+    opacity: 1;
+}
+.opacity7 {
+    opacity: .7;
+}
+
+.navbar {
+    margin: 10px auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    opacity: .6;
+    font-size: 22px;
+    border-radius: 5px;
+}
+.navbar a:hover{
+    color: white;
+    transition: .7s;
+    opacity: 1;
+}
