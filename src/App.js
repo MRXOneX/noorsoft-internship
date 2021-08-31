@@ -1,7 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
 
-import "react-toastify/dist/ReactToastify.min.css";
-
 import { ToastContainer } from "react-toastify";
 
 import { Route, Router, Switch } from "react-router-dom";
@@ -19,6 +17,8 @@ import Login from "./components/Authorization/Login/Login";
 import { authActions } from "./redux/actions/authorizationActions/authActions";
 
 import history from "./history";
+
+import "react-toastify/dist/ReactToastify.min.css";
 
 import "./App.css";
 

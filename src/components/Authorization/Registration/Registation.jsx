@@ -4,9 +4,9 @@ import { FormRegistration } from "../utilsAuth/FormsAuth";
 
 import LinksAuth from "../utilsAuth/LinksAuth";
 
-import style from "./Registration.module.css";
-
 import Title from "../../utils/Title";
+
+import style from "./Registration.module.css";
 
 const Registration = ({ user }) => {
   if (user) {

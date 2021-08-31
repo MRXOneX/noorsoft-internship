@@ -2,12 +2,13 @@ import { Redirect } from "react-router-dom";
 
 import { useDispatch } from "react-redux";
 
-import style from "./ForgotPassword.module.css";
-
 import LinksAuth from "../utilsAuth/LinksAuth";
 
 import Title from "../../utils/Title";
+
 import { FormForgot } from "../utilsAuth/FormsAuth";
+
+import style from "./ForgotPassword.module.css";
 
 const ForgotPassword = ({ user }) => {
   const dispatch = useDispatch();

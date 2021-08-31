@@ -17,9 +17,9 @@ import { FormLogin } from "../utilsAuth/FormsAuth";
 
 import LinksAuth from "../utilsAuth/LinksAuth";
 
-import style from "./Login.module.css";
-
 import Title from "../../utils/Title";
+
+import style from "./Login.module.css";
 
 library.add(fab);
 const Login = ({ user }) => {
