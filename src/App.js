@@ -2,9 +2,9 @@ import {useDispatch, useSelector} from "react-redux";
 
 import 'react-toastify/dist/ReactToastify.min.css';
 
-import { ToastContainer } from 'react-toastify';
+import {ToastContainer} from 'react-toastify';
 
-import {Route, Switch} from "react-router-dom";
+import {Route, Router, Switch} from "react-router-dom";
 
 import {useEffect} from "react";
 
@@ -18,6 +18,8 @@ import Login from "./components/Authorization/Login/Login";
 
 import {authActions} from "./redux/actions/authorizationActions/authActions";
 
+import history from './history';
+
 import './App.css';
 
 function App() {
@@ -28,14 +30,16 @@ function App() {
     const {user} = useSelector(({auth}) => auth)
     return (
         <>
-            <ToastContainer />
+            <ToastContainer/>
+            <Router history={history}>
                 <Switch>
                     <Route path='/login' render={() => <Login user={user}/>}/>
                     <Route path='/registration' render={() => <Registration user={user}/>}/>
                     <Route path='/forgot_password' render={() => <ForgotPassword user={user}/>}/>
-                    <Route path='/update_password' render={() => <UpdatePassword />} />
+                    <Route path='/update_password' render={() => <UpdatePassword/>}/>
                     <Route exact path='/' render={() => 'вы авторизованы'}/>
                 </Switch>
+            </Router>
         </>
     );
 }
