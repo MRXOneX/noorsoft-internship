@@ -2,7 +2,7 @@ import {
     FETCH_FORGOTPASSWORD_FAILURE,
     FETCH_FORGOTPASSWORD_REQUEST,
     FETCH_FORGOTPASSWORD_SUCCESS
-} from "../constans/forgotPasswordConstans";
+} from "../../constans/authorizationConstans/forgotPasswordConstans";
 
 const initialState = {
     forgotPassword: null

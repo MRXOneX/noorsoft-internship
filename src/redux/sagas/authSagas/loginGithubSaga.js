@@ -2,11 +2,11 @@ import {call, put, takeLatest} from "redux-saga/effects";
 
 import firebase from "firebase";
 
-import {FETCH_GITHUB_REQUEST} from "../../constans/loginConstans";
+import {FETCH_GITHUB_REQUEST} from "../../constans/authorizationConstans/loginConstans";
 
-import {loginGithubActions} from "../../actions/loginActions";
+import {loginGithubActions} from "../../actions/authorizationActions/loginActions";
 
-import {authActions} from "../../actions/authActions";
+import {authActions} from "../../actions/authorizationActions/authActions";
 
 import {reduxSagaFirebase} from "../../../index";
 

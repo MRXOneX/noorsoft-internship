@@ -8,7 +8,7 @@ import {Redirect} from "react-router-dom";
 
 import {useDispatch} from "react-redux";
 
-import {loginGithubActions, loginGoogleActions} from "../../../redux/actions/loginActions";
+import {loginGithubActions, loginGoogleActions} from "../../../redux/actions/authorizationActions/loginActions";
 
 import {FormLogin} from "../utilsAuth/FormsAuth";
 
@@ -47,7 +47,7 @@ const Login = ({user}) => {
                 </div>
             </div>
             <div className={style.regAndForgot}>
-                <LinksAuth linkOne='/registration' linkTwo='/forgot' nameOne='Регистрация' nameTwo='Забыли пароль?'/>
+                <LinksAuth linkOne='/registration' linkTwo='/forgot_password' nameOne='Регистрация' nameTwo='Забыли пароль?'/>
             </div>
         </div>
     )

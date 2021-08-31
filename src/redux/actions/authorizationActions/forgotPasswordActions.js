@@ -2,7 +2,7 @@ import {
     FETCH_FORGOTPASSWORD_FAILURE,
     FETCH_FORGOTPASSWORD_REQUEST,
     FETCH_FORGOTPASSWORD_SUCCESS
-} from "../constans/forgotPasswordConstans";
+} from "../../constans/authorizationConstans/forgotPasswordConstans";
 
 export const forgotPasswordActions = {
     forgotPasswordRequest: (email) => ({type: FETCH_FORGOTPASSWORD_REQUEST, email}),

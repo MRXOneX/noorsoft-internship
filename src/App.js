@@ -16,7 +16,7 @@ import Registration from "./components/Authorization/Registration/Registation";
 
 import Login from "./components/Authorization/Login/Login";
 
-import {authActions} from "./redux/actions/authActions";
+import {authActions} from "./redux/actions/authorizationActions/authActions";
 
 import './App.css';
 
@@ -29,13 +29,13 @@ function App() {
     return (
         <>
             <ToastContainer />
-            <Switch>
-                <Route path='/login' render={() => <Login user={user}/>}/>
-                <Route path='/registration' render={() => <Registration user={user}/>}/>
-                <Route path='/forgot' render={() => <ForgotPassword user={user}/>}/>
-                <Route path='/update/:link' render={() => <UpdatePassword />} />
-                <Route exact path='/' render={() => 'вы авторизованы'}/>
-            </Switch>
+                <Switch>
+                    <Route path='/login' render={() => <Login user={user}/>}/>
+                    <Route path='/registration' render={() => <Registration user={user}/>}/>
+                    <Route path='/forgot_password' render={() => <ForgotPassword user={user}/>}/>
+                    <Route path='/update_password' render={() => <UpdatePassword />} />
+                    <Route exact path='/' render={() => 'вы авторизованы'}/>
+                </Switch>
         </>
     );
 }

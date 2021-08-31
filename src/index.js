@@ -27,6 +27,7 @@ export const reduxSagaFirebase = new ReduxSagaFirebase(firebase.initializeApp({
     measurementId: process.env.REACT_APP_MEASUREMENT_ID,
     databaseURL: process.env.REACT_APP_DATABASE_URL
 }))
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

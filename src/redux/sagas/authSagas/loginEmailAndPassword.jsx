@@ -4,11 +4,11 @@ import 'react-toastify/dist/ReactToastify.min.css';
 
 import {toast} from "react-toastify";
 
-import {FETCH_EMAIL_REQUEST} from "../../constans/loginConstans";
+import {FETCH_EMAIL_REQUEST} from "../../constans/authorizationConstans/loginConstans";
 
-import {loginEmailActions} from "../../actions/loginActions";
+import {loginEmailActions} from "../../actions/authorizationActions/loginActions";
 
-import {authActions} from "../../actions/authActions";
+import {authActions} from "../../actions/authorizationActions/authActions";
 
 import {reduxSagaFirebase} from "../../../index";
 

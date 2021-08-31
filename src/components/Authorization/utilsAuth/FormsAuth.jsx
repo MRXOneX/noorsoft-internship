@@ -12,11 +12,13 @@ import {useFormik} from "formik";
 
 import * as yup from "yup";
 
-import {forgotPasswordActions} from "../../../redux/actions/forgotPasswordActions";
+import {forgotPasswordActions} from "../../../redux/actions/authorizationActions/forgotPasswordActions";
 
-import {registrationActions} from "../../../redux/actions/registrationActions";
+import {registrationActions} from "../../../redux/actions/authorizationActions/registrationActions";
 
-import {loginEmailActions} from "../../../redux/actions/loginActions";
+import {updatePasswordActions} from "../../../redux/actions/authorizationActions/updatePassword";
+
+import {loginEmailActions} from "../../../redux/actions/authorizationActions/loginActions";
 
 
 const validateLoginAndReg = yup.object({
@@ -131,15 +133,15 @@ export const FormForgot = ({dispatch}) => {
                 onChange={formikForgot.handleChange}
                 value={formikForgot.values.email}
             />
-            <Button color="primary">Восстановить</Button>
+            <Button type='submit' color="primary">Восстановить</Button>
         </form>
     )
 }
-export const FormUpdate = () => {
+export const FormUpdate = ({code}) => {
     const dispatch = useDispatch()
     const formikUpdate = useFormik({
         initialValues: {
-            email: ''
+            newPassword: ''
         },
         validatePassword: yup.object({
             password: yup.string()
@@ -150,21 +152,21 @@ export const FormUpdate = () => {
                 ),
         }),
         onSubmit: values => {
-            dispatch(forgotPasswordActions.forgotPasswordRequest(values.email))
+            dispatch(updatePasswordActions.updatePasswordRequest(code, values.newPassword))
         },
     });
     return (
         <form onSubmit={formikUpdate.handleSubmit}>
             <label htmlFor="email">Новый пароль</label><br/>
             <Input
-                id="password"
-                name="password"
+                id="newPassword"
+                name="newPassword"
                 type="password"
                 placeholder='Введите свой пароль'
                 onChange={formikUpdate.handleChange}
-                value={formikUpdate.values.email}
+                value={formikUpdate.values.newPassword}
             />
-            <Button color="primary">Обновить пароль</Button>
+            <Button type='submit' color="primary">Обновить пароль</Button>
         </form>
     )
 }

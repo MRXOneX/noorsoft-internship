@@ -5,13 +5,15 @@ import createSagaMiddleware from 'redux-saga'
 import rootSaga from "./sagas";
 
 //reducers
-import forgotPasswordReducer from "./reducers/fotgotPasswordReducer";
+import forgotPasswordReducer from "./reducers/authorizationReducer/fotgotPasswordReducer";
 
-import registrationReducer from "./reducers/registrationReducer";
+import registrationReducer from "./reducers/authorizationReducer/registrationReducer";
 
-import loginReducer from "./reducers/loginReducer";
+import updatePassword from "./reducers/authorizationReducer/updatePassword";
 
-import authReducer from "./reducers/authReducer";
+import loginReducer from "./reducers/authorizationReducer/loginReducer";
+
+import authReducer from "./reducers/authorizationReducer/authReducer";
 
 
 const sagaMiddleware = createSagaMiddleware()
@@ -20,7 +22,8 @@ const reducers = combineReducers({
     auth: authReducer,
     login: loginReducer,
     registration: registrationReducer,
-    forgotPassword: forgotPasswordReducer
+    forgotPassword: forgotPasswordReducer,
+    updatePassword: updatePassword
 })
 const store = createStore(reducers, applyMiddleware(sagaMiddleware))
 

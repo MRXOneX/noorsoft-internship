@@ -2,7 +2,7 @@ import {
     FETCH_REGISTRATION_FAILURE,
     FETCH_REGISTRATION_REQUEST,
     FETCH_REGISTRATION_SUCCESS
-} from "../constans/registrationConstans";
+} from "../../constans/authorizationConstans/registrationConstans";
 
 const initialState = {
     registration: null,

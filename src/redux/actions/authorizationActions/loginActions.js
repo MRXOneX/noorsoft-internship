@@ -2,7 +2,7 @@ import {
     FETCH_EMAIL_FAILURE, FETCH_EMAIL_REQUEST, FETCH_EMAIL_SUCCESS,
     FETCH_GOOGLE_FAILURE, FETCH_GOOGLE_REQUEST, FETCH_GOOGLE_SUCCESS,
     FETCH_GITHUB_FAILURE, FETCH_GITHUB_REQUEST, FETCH_GITHUB_SUCCESS,
-} from "../constans/loginConstans";
+} from "../../constans/authorizationConstans/loginConstans";
 
 export const loginEmailActions = {
     setEmailRequest: (email, password) => ({type: FETCH_EMAIL_REQUEST, email ,password}),
