@@ -1,4 +1,4 @@
-import {SET_USER} from "../constans/authConstans";
+import {SET_USER} from "../../constans/authorizationConstans/authConstans";
 
 const initialState = {
     user: null

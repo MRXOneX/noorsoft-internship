@@ -1,13 +1,28 @@
 import {call, put, takeLatest} from "redux-saga/effects";
 
-import {FETCH_EMAIL_REQUEST} from "../../constans/loginConstans";
+import 'react-toastify/dist/ReactToastify.min.css';
 
-import {loginEmailActions} from "../../actions/loginActions";
+import {toast} from "react-toastify";
 
-import {authActions} from "../../actions/authActions";
+import {FETCH_EMAIL_REQUEST} from "../../constans/authorizationConstans/loginConstans";
+
+import {loginEmailActions} from "../../actions/authorizationActions/loginActions";
+
+import {authActions} from "../../actions/authorizationActions/authActions";
 
 import {reduxSagaFirebase} from "../../../index";
 
+function handleClick() {
+    toast.success(`Успешно авторизовались`,  {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+    });
+}
 
 
 function* loginEmail(action) {
@@ -15,6 +30,7 @@ function* loginEmail(action) {
         yield call(reduxSagaFirebase.auth.signInWithEmailAndPassword, action.email.trim(), action.password)
         yield put(loginEmailActions.setEmailSuccess())
         yield put(authActions.setUserRequest())
+        yield call(handleClick)
     } catch (error) {
         console.log(error)
         yield put(loginEmailActions.setEmailFailure(error.message))

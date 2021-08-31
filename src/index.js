@@ -1,17 +1,21 @@
 import React from 'react';
 
+import ReduxSagaFirebase from "redux-saga-firebase";
+
+import {BrowserRouter} from "react-router-dom";
+
+import 'bootstrap/dist/css/bootstrap.css';
+
+import {Provider} from "react-redux";
+
 import ReactDOM from 'react-dom';
 
 import firebase from 'firebase'
 
-import {Provider} from "react-redux";
-
-import ReduxSagaFirebase from "redux-saga-firebase";
-
 import App from './App';
 
 import store from "./redux/store";
-console.log(process.env)
+
 
 export const reduxSagaFirebase = new ReduxSagaFirebase(firebase.initializeApp({
     apiKey: process.env.REACT_APP_API_KEY,
@@ -23,10 +27,13 @@ export const reduxSagaFirebase = new ReduxSagaFirebase(firebase.initializeApp({
     measurementId: process.env.REACT_APP_MEASUREMENT_ID,
     databaseURL: process.env.REACT_APP_DATABASE_URL
 }))
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-        <App/>
+        <BrowserRouter>
+            <App/>
+        </BrowserRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
