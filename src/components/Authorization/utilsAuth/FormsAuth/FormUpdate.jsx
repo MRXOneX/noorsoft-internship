@@ -1,7 +1,7 @@
+import { Button, Input } from "reactstrap";
 import { useDispatch } from "react-redux";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { Button, Input } from "reactstrap";
 
 import { updatePasswordActions } from "../../../../redux/actions/authorizationActions/updatePassword";
 

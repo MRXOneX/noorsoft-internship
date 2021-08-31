@@ -1,8 +1,6 @@
-import LinksAuth from "../utilsAuth/LinksAuth";
-
-import Title from "../../utils/Title";
-
 import { FormUpdate } from "../utilsAuth/FormsAuth/index";
+import LinksAuth from "../utilsAuth/LinksAuth";
+import Title from "../../utils/Title";
 
 import style from "./UpdatePassword.module.css";
 

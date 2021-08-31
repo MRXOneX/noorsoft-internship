@@ -1,10 +1,8 @@
 import { Redirect } from "react-router-dom";
 
-import LinksAuth from "../utilsAuth/LinksAuth";
-
-import Title from "../../utils/Title";
-
 import { FormRegistration } from "../utilsAuth/FormsAuth/index";
+import LinksAuth from "../utilsAuth/LinksAuth";
+import Title from "../../utils/Title";
 
 import style from "./Registration.module.css";
 

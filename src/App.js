@@ -1,25 +1,16 @@
 import { useDispatch, useSelector } from "react-redux";
-
 import { ToastContainer } from "react-toastify";
-
 import { Route, Router, Switch } from "react-router-dom";
-
 import { useEffect } from "react";
 
 import UpdatePassword from "./components/Authorization/UpdatePassword/UpdatePassword";
-
 import ForgotPassword from "./components/Authorization/ForgotPassword/ForgotPassword";
-
 import Registration from "./components/Authorization/Registration/Registation";
-
 import Login from "./components/Authorization/Login/Login";
-
 import { authActions } from "./redux/actions/authorizationActions/authActions";
-
 import history from "./history";
 
 import "react-toastify/dist/ReactToastify.min.css";
-
 import "./App.css";
 
 function App() {

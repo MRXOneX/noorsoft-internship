@@ -1,10 +1,10 @@
-import { useDispatch } from "react-redux";
-import { Button, Input } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button, Input } from "reactstrap";
+import { useDispatch } from "react-redux";
 import { useFormik } from "formik";
+import * as yup from "yup";
 
 import { loginEmailActions } from "../../../../redux/actions/authorizationActions/loginActions";
-import * as yup from "yup";
 
 const FormLogin = () => {
   const dispatch = useDispatch();
