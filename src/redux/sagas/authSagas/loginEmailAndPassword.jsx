@@ -8,17 +8,7 @@ import { reduxSagaFirebase } from "../../../index";
 
 import "react-toastify/dist/ReactToastify.min.css";
 
-function handleClick() {
-  toast.success(`Успешно авторизовались`, {
-    position: "top-center",
-    autoClose: 2000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: false,
-    draggable: true,
-    progress: undefined,
-  });
-}
+const notifyLogin = () => toast("Успешно авторизовались");
 
 function* loginEmail(action) {
   try {
@@ -29,7 +19,7 @@ function* loginEmail(action) {
     );
     yield put(loginEmailActions.setEmailSuccess());
     yield put(authActions.setUserRequest());
-    yield call(handleClick);
+    yield call(notifyLogin);
   } catch (error) {
     console.log(error);
     yield put(loginEmailActions.setEmailFailure(error.message));

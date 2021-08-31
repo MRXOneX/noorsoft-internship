@@ -6,17 +6,7 @@ import { updatePasswordActions } from "../../actions/authorizationActions/update
 import { reduxSagaFirebase } from "../../../index";
 import history from "../../../history";
 
-function handleClick() {
-  toast.success(`Пароль успешно сменен`, {
-    position: "top-center",
-    autoClose: 1000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: false,
-    draggable: true,
-    progress: undefined,
-  });
-}
+const notifyUpdatePassword = () => toast("Пароль успешно сменен");
 
 function* updatePassword(action) {
   try {
@@ -27,7 +17,7 @@ function* updatePassword(action) {
       action.newPassword
     );
     yield put(updatePasswordActions.updatePasswordSuccess());
-    yield call(handleClick);
+    yield call(notifyUpdatePassword);
     history.push("/login");
   } catch (error) {
     yield put(updatePasswordActions.updatePasswordFailure(error));

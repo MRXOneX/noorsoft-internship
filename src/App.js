@@ -8,6 +8,7 @@ import ForgotPassword from "./components/Authorization/ForgotPassword/ForgotPass
 import Registration from "./components/Authorization/Registration/Registation";
 import Login from "./components/Authorization/Login/Login";
 import { authActions } from "./redux/actions/authorizationActions/authActions";
+import { useUserSelector } from "./redux/selectors";
 import history from "./history";
 
 import "react-toastify/dist/ReactToastify.min.css";
@@ -18,11 +19,21 @@ function App() {
     dispatch(authActions.setUserRequest());
   }, []);
   const dispatch = useDispatch();
-  const { user } = useSelector(({ auth }) => auth);
+  const user = useUserSelector();
 
   return (
     <>
-      <ToastContainer />
+      <ToastContainer
+        position="top-left"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <Router history={history}>
         <Switch>
           <Route path="/login" render={() => <Login user={user} />} />
