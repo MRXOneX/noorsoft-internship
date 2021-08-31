@@ -13,11 +13,11 @@ import {
   loginGoogleActions,
 } from "../../../redux/actions/authorizationActions/loginActions";
 
-import { FormLogin } from "../utilsAuth/FormsAuth";
-
 import LinksAuth from "../utilsAuth/LinksAuth";
 
 import Title from "../../utils/Title";
+
+import { FormLogin } from "../utilsAuth/FormsAuth/index";
 
 import style from "./Login.module.css";
 

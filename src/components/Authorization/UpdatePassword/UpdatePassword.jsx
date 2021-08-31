@@ -2,7 +2,7 @@ import LinksAuth from "../utilsAuth/LinksAuth";
 
 import Title from "../../utils/Title";
 
-import { FormUpdate } from "../utilsAuth/FormsAuth";
+import { FormUpdate } from "../utilsAuth/FormsAuth/index";
 
 import style from "./UpdatePassword.module.css";
 
