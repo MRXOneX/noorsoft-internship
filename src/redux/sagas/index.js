@@ -1,12 +1,13 @@
 import { all } from "redux-saga/effects";
 
-import updatePasswordWatch from "./authSagas/updatePasswordSaga";
-import forgotPasswordWatch from "./authSagas/forgotPasswordSaga";
-import loginEmailWatch from "./authSagas/loginEmailAndPassword";
-import registrationWatch from "./authSagas/registrationSaga";
-import authChangedWatch from "./authSagas/authChangedSaga";
-import loginGoogleWatch from "./authSagas/loginGoogleSaga";
-import loginGithubWatch from "./authSagas/loginGithubSaga";
+import updatePasswordWatch from "./authorizationSagas/updatePasswordSaga";
+import forgotPasswordWatch from "./authorizationSagas/forgotPasswordSaga";
+import loginEmailWatch from "./authorizationSagas/loginEmailAndPassword";
+import registrationWatch from "./authorizationSagas/registrationSaga";
+import authChangedWatch from "./authorizationSagas/authChangedSaga";
+import loginGoogleWatch from "./authorizationSagas/loginGoogleSaga";
+import loginGithubWatch from "./authorizationSagas/loginGithubSaga";
+import signOutWatch from "./authorizationSagas/signOutSaga";
 
 export default function* rootSaga() {
   yield all([
@@ -17,5 +18,6 @@ export default function* rootSaga() {
     loginGithubWatch(),
     forgotPasswordWatch(),
     updatePasswordWatch(),
+    signOutWatch(),
   ]);
 }

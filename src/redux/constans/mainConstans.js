@@ -1,0 +1,1 @@
+export const SET_VISIBLE_POPUP = "SET_VISIBLE_POPUP";

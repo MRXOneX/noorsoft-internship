@@ -8,6 +8,7 @@ import registrationReducer from "./reducers/authorizationReducer/registrationRed
 import updatePassword from "./reducers/authorizationReducer/updatePassword";
 import loginReducer from "./reducers/authorizationReducer/loginReducer";
 import authReducer from "./reducers/authorizationReducer/authReducer";
+import mainReducer from "./reducers/mainReducer";
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -17,6 +18,7 @@ const reducers = combineReducers({
   registration: registrationReducer,
   forgotPassword: forgotPasswordReducer,
   updatePassword: updatePassword,
+  main: mainReducer,
 });
 const store = createStore(reducers, applyMiddleware(sagaMiddleware));
 

@@ -27,11 +27,30 @@
     color: white;
     background-color: #6C69FF;
 }
-.opacity1 {
-    opacity: 1;
+.headerDropMenu {
+    z-index: 1001;
+    padding: 0;
+    text-align: center;
+    color: black;
+    margin-top: 40px;
+    position: absolute;
+    right: 10px;
+    height: auto;
+    width: 100px;
+    background-color: white;
+    border-radius: 7px 0 7px 7px;
 }
-.opacity7 {
-    opacity: .7;
+.menuBtns {
+    cursor: pointer;
+    padding: 5px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    width: 100%;
+}
+.menuBtns:hover {
+    transition: .7s;
+    background-color: rgba(140, 139, 140, 0.36);
 }
 
 .navbar {
@@ -51,4 +70,11 @@
     color: white;
     transition: .7s;
     opacity: 1;
+}
+
+.opacity1 {
+    opacity: 1;
+}
+.opacity7 {
+    opacity: .7;
 }
