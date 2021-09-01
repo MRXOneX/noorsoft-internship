@@ -96,6 +96,34 @@
     opacity: 1;
 }
 
+.dialogs {
+    height: 300px;
+    overflow-y: auto;
+}
+.dialogs a {
+    text-decoration: none;
+    color: white;
+}
+.dialogs::-webkit-scrollbar {
+    width: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .opacity1 {
     opacity: 1;
 }

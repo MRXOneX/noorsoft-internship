@@ -1,0 +1,52 @@
+.dialog {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 20% 60% 20%;
+    cursor: pointer;
+    height: 60px;
+    max-width: 270px;
+}
+.dialog:hover {
+    transition: .4s;
+    background-color: rgba(255, 255, 255, 0.20);
+}
+.iconUser {
+    margin: 10px;
+    border-radius: 5px;
+    background: rgba(146, 143, 253, 1);
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-weight: 550;
+    text-align: center;
+    box-shadow: 0 0 2px 0 rgba(146, 143, 253, 1);
+}
+.name {
+    padding-left: 5px;
+}
+.name h6 {
+    font-size: 14px;
+    padding: 0;
+    margin: 8px 0 0 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+}
+.name p {
+    font-size: 14px;
+    margin: 3px 0 0 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.countMessages {
+    text-align: center;
+    font-weight: 550;
+    font-size: 10px;
+    margin: 20px 0 0 15px;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    width: 24px;
+    overflow: hidden;
+}

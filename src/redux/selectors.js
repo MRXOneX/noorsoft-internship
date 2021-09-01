@@ -10,7 +10,7 @@ export const useUserSelector = () => useSelector(({ auth }) => auth.user);
 export const useRegistrationSelector = () =>
   useSelector(({ registration }) => registration.registration);
 
-//----------------------Main----------------------//
+//----------------------mainReducer----------------------//
 
 export const useVisiblePopup = () =>
   useSelector(({ main }) => main.visiblePopup);

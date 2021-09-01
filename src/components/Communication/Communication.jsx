@@ -2,7 +2,7 @@ import { Redirect, Route } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 
-import { mainActions } from "../../redux/actions/mainActions";
+import { mainActions } from "../../redux/actions/mainActions/mainActions";
 import Main from "./Main/Main";
 
 import "./Communication.css";

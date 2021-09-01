@@ -7,7 +7,7 @@ import {
 } from "../../../../redux/selectors";
 
 import styles from "../Main.module.css";
-import { mainActions } from "../../../../redux/actions/mainActions";
+import { mainActions } from "../../../../redux/actions/mainActions/mainActions";
 import { useDispatch } from "react-redux";
 import { useHandleOutSideClick } from "../../../utils/handleOutSideClick";
 
