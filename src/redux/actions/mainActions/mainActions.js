@@ -2,7 +2,7 @@ import {
   SET_ACTIVE_INPUT_SEARCH,
   SET_INPUT_VALUE_SEARCH,
   SET_VISIBLE_POPUP,
-} from "../constans/mainConstans";
+} from "../constans/MainConstans/mainConstans";
 
 export const mainActions = {
   setVisiblePopup: (payload) => ({ type: SET_VISIBLE_POPUP, payload }),
