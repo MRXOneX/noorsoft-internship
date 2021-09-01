@@ -1,16 +1,21 @@
 import { useDataDialogsGetStart } from "../../../../../redux/selectors";
 import Dialog from "../Dialog/Dialog";
 
-import styles from "../../Main.module.css";
 import { useDispatch } from "react-redux";
 import { dialogsActions } from "../../../../../redux/actions/mainActions/dialogsActions";
+import history from "../../../../../history";
+
+import styles from "../../Main.module.css";
+import { dialogActions } from "../../../../../redux/actions/messagesActions/dialogAction";
 
 const DialogsGetStart = () => {
   const dataGetStart = useDataDialogsGetStart();
-  console.log(dataGetStart);
+
   const dispatch = useDispatch();
   const onClickDialogInActive = (obj) => {
     dispatch(dialogsActions.setDialogInActive(obj));
+    dispatch(dialogActions.setDialog(obj));
+    history.push(`/active/messages/${obj.id}`);
   };
 
   return (

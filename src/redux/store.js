@@ -8,6 +8,7 @@ import registrationReducer from "./reducers/authorizationReducer/registrationRed
 import updatePassword from "./reducers/authorizationReducer/updatePassword";
 import loginReducer from "./reducers/authorizationReducer/loginReducer";
 import authReducer from "./reducers/authorizationReducer/authReducer";
+import dialogReducer from "./reducers/messagesReducer/dialogReducer";
 import dialogsReducer from "./reducers/mainReducer/dialogsReducer";
 import mainReducer from "./reducers/mainReducer/mainReducer";
 
@@ -21,6 +22,7 @@ const reducers = combineReducers({
   updatePassword: updatePassword,
   dialogs: dialogsReducer,
   main: mainReducer,
+  dialog: dialogReducer,
 });
 const store = createStore(reducers, applyMiddleware(sagaMiddleware));
 

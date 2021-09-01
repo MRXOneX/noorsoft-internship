@@ -34,3 +34,7 @@ export const useDataDialogsSaved = () =>
 
 export const useDataDialogsComplected = () =>
   useSelector(({ dialogs }) => dialogs.dataDialogsComplected);
+
+//----------------------dialogReducer----------------------//
+
+export const useDialog = () => useSelector(({ dialog }) => dialog.dialog);
