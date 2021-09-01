@@ -34,13 +34,14 @@
     color: black;
     margin-top: 40px;
     position: absolute;
-    right: 10px;
+    right: 12px;
     height: auto;
     width: 100px;
     background-color: white;
     border-radius: 7px 0 7px 7px;
 }
 .menuBtns {
+    border-radius: 7px;
     cursor: pointer;
     padding: 5px;
     font-weight: bold;
@@ -51,6 +52,29 @@
 .menuBtns:hover {
     transition: .7s;
     background-color: rgba(140, 139, 140, 0.36);
+}
+.search{
+    margin: 5px auto;
+    width: 92%;
+    border-radius: 5px;
+    padding: 5px;
+    background: rgb(196, 196, 196);
+    background: linear-gradient(90deg, rgba(196, 196, 196, 0.15495207667731625) 0%, rgba(255, 255, 255, 0) 0%, rgba(95, 205, 219, 0.5550595238095238) 0%, rgba(0, 226, 255, 0.292332268370607) 0%);
+}
+
+.search input {
+    margin-left: 3px;
+    width: 200px;
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-weight: 550;
+}
+
+.search input::placeholder {
+    font-weight: 550;
+    color: white;
 }
 
 .navbar {

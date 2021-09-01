@@ -1,9 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import styles from "../Main.module.css";
 
 const Navbar = () => {
   return (
-    <>
+    <div className={styles.navbar}>
       <Link to="/getStart">
         <FontAwesomeIcon
           style={{ cursor: "pointer" }}
@@ -28,7 +29,7 @@ const Navbar = () => {
           icon={["fas", "user-friends"]}
         />
       </Link>
-    </>
+    </div>
   );
 };
 export default Navbar;

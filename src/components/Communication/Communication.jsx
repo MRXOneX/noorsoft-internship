@@ -1,13 +1,19 @@
 import { Redirect, Route } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 
+import { mainActions } from "../../redux/actions/mainActions";
 import Main from "./Main/Main";
 
 import "./Communication.css";
 
 const Communication = ({ user }) => {
-  if (!user) {
-    return <Redirect to="/login" />;
-  }
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(mainActions.setVisiblePopup(false));
+  }, []);
+
+  if (!user) return <Redirect to="/login" />;
 
   return (
     <div className="wrapper">

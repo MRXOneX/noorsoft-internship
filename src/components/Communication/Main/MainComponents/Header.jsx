@@ -13,11 +13,7 @@ import { signOutActions } from "../../../../redux/actions/authorizationActions/s
 const Header = () => {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(mainActions.setVisiblePopup(false));
-  }, []);
-
-  const visiblePopup = useVisiblePopup();
+  const visiblePopup = useVisiblePopup(null);
   const toggleVisiblePopup = () => {
     dispatch(mainActions.setVisiblePopup(!visiblePopup));
   };
