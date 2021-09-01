@@ -2,6 +2,7 @@ import {
   FETCH_DIALOGS_FAILURE,
   FETCH_DIALOGS_REQUEST,
   FETCH_DIALOGS_SUCCESS,
+  SET_DIALOG_IN_ACTIVE,
   SET_DIALOGS_ACTIVE,
   SET_DIALOGS_COMPLECTED,
   SET_DIALOGS_GET_START,
@@ -23,4 +24,6 @@ export const dialogsActions = {
     type: SET_DIALOGS_COMPLECTED,
     dataComplected,
   }),
+
+  setDialogInActive: (obj) => ({ type: SET_DIALOG_IN_ACTIVE, obj }),
 };

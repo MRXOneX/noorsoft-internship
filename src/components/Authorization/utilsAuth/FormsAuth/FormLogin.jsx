@@ -55,7 +55,7 @@ const FormLogin = () => {
         value={formikLogin.values.password}
       />
 
-      <Button color="primary">
+      <Button type="submit" color="primary">
         Войти <FontAwesomeIcon icon={["fas", "sign-in-alt"]} />
       </Button>
     </form>

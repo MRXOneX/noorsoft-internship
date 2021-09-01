@@ -7,6 +7,7 @@ import { reduxSagaFirebase } from "../../../index";
 function* getDialogs() {
   try {
     const data = yield call(reduxSagaFirebase.database.read, "/dialogs");
+
     const dataGetStart = data.filter((item) => {
       if (item.status === "getStart") return item;
     });

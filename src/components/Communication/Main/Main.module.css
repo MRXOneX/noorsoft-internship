@@ -28,7 +28,7 @@
     background-color: #6C69FF;
 }
 .headerDropMenu {
-    z-index: 1001;
+    z-index: 1;
     padding: 0;
     text-align: center;
     color: black;
