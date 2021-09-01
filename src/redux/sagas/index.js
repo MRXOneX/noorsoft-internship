@@ -8,6 +8,7 @@ import authChangedWatch from "./authorizationSagas/authChangedSaga";
 import loginGoogleWatch from "./authorizationSagas/loginGoogleSaga";
 import loginGithubWatch from "./authorizationSagas/loginGithubSaga";
 import signOutWatch from "./authorizationSagas/signOutSaga";
+import getDialogsWatch from "./mainSagas/dialogsSaga";
 
 export default function* rootSaga() {
   yield all([
@@ -19,5 +20,6 @@ export default function* rootSaga() {
     forgotPasswordWatch(),
     updatePasswordWatch(),
     signOutWatch(),
+    getDialogsWatch(),
   ]);
 }

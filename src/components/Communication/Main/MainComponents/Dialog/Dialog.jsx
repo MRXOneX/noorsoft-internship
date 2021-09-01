@@ -4,13 +4,13 @@ import CountMessages from "./DialogComponents/CountMessages";
 
 import styles from "./Dialog.module.css";
 
-const MainDialog = () => {
+const Dialog = ({ name }) => {
   return (
     <div className={styles.dialog}>
-      <PhotoUser />
-      <NameUser />
+      <PhotoUser name={name} />
+      <NameUser name={name} />
       <CountMessages />
     </div>
   );
 };
-export default MainDialog;
+export default Dialog;

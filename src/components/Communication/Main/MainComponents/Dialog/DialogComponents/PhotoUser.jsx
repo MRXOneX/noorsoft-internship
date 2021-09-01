@@ -1,10 +1,10 @@
-import styles from "../Dialog.module.css";
+import stylesDialog from "../Dialog.module.css";
 import Title from "../../../../../utils/Title";
 
-const PhotoUser = () => {
+const PhotoUser = ({ name }) => {
   return (
-    <div className={styles.iconUser}>
-      <Title title={"O"} size={30} showHr={false} />
+    <div className={stylesDialog.iconUser}>
+      <Title title={name.charAt(0)} size={30} showHr={false} />
     </div>
   );
 };

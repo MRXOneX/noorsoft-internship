@@ -1,9 +1,9 @@
 import styles from "../Dialog.module.css";
 
-const NameUser = () => {
+const NameUser = ({ name }) => {
   return (
     <div className={styles.name}>
-      <h6>NAME</h6>
+      <h6>{name}</h6>
       <p>Teasssssasdasdasdssssssssssssxt</p>
     </div>
   );

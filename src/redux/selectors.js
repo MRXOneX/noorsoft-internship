@@ -20,3 +20,17 @@ export const useActiveInputSearch = () =>
 
 export const useInputValueSearch = () =>
   useSelector(({ main }) => main.inputValueSearch);
+
+//----------------------dialogsReducer----------------------//
+
+export const useDataDialogsGetStart = () =>
+  useSelector(({ dialogs }) => dialogs.dataDialogsGetStart);
+
+export const useDataDialogsActive = () =>
+  useSelector(({ dialogs }) => dialogs.dataDialogsActive);
+
+export const useDataDialogsSaved = () =>
+  useSelector(({ dialogs }) => dialogs.dataDialogsSaved);
+
+export const useDataDialogsComplected = () =>
+  useSelector(({ dialogs }) => dialogs.dataDialogsComplected);
