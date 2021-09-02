@@ -79,6 +79,25 @@
     font-size: 12px;
     text-align: center;
 }
+.complectedDialogText {
+    border-radius: 30px 30px 0 0;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    background-color: #c4c4c4;
+    box-shadow: 0 -2px 6px 0 rgba(204, 204, 204, 0.86);
+}
+.complectedDialogText p {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+.complectedDialogText span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    opacity: .9;
+}
 .writeHere {
     background-color: #c4c4c46c;
     border-radius: 0 0 5px 5px;
