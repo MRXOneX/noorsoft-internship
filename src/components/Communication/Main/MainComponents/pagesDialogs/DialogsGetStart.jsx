@@ -1,6 +1,9 @@
 import { useDispatch } from "react-redux";
 
-import { useDataDialogsGetStart } from "../../../../../redux/selectors";
+import {
+  useDataDialogsGetStart,
+  useInputValueSearch,
+} from "../../../../../redux/selectors";
 import Dialog from "../Dialog/Dialog";
 import { dialogActions } from "../../../../../redux/actions/messagesActions/dialogAction";
 import { dialogsActions } from "../../../../../redux/actions/mainActions/dialogsActions";
@@ -18,10 +21,15 @@ const DialogsGetStart = () => {
     history.push(`/active/messages/${obj.id}`);
   };
 
+  const valueSearchInput = useInputValueSearch();
+  const searchData = dataGetStart.filter((item) =>
+    item.name.toLowerCase().includes(valueSearchInput.toLowerCase())
+  );
+
   return (
     <div className={styles.dialogs}>
-      {dataGetStart &&
-        dataGetStart.map((item, index) => (
+      {searchData &&
+        searchData.map((item, index) => (
           <div
             key={`${item.name}_${index}`}
             onClick={() => onClickDialogInActive(item)}

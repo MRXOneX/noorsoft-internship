@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 
-import { useDataDialogsSaved } from "../../../../../redux/selectors";
+import {
+  useDataDialogsSaved,
+  useInputValueSearch,
+} from "../../../../../redux/selectors";
 import Dialog from "../Dialog/Dialog";
 
 import styles from "../../Main.module.css";
@@ -8,10 +11,14 @@ import styles from "../../Main.module.css";
 const DialogsSaved = ({ onOpenMessages }) => {
   const dataSaved = useDataDialogsSaved();
 
+  const valueSearchInput = useInputValueSearch();
+  const searchData = dataSaved.filter((item) =>
+    item.name.toLowerCase().includes(valueSearchInput.toLowerCase())
+  );
   return (
     <div className={styles.dialogs}>
-      {dataSaved &&
-        dataSaved.map((item, index) => (
+      {searchData &&
+        searchData.map((item, index) => (
           <Link
             key={`${item.name}_${index}`}
             to={`/saved/messages/${item.id}`}
