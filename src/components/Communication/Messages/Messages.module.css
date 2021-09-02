@@ -48,6 +48,7 @@
     font-size: 16px;
 }
 .messagesBlock {
+    position: relative;
     padding: 5px 0;
     overflow-y: auto;
 }
@@ -58,6 +59,20 @@
 .messagesBlock::-webkit-scrollbar-thumb {
     -webkit-box-shadow: 0 0 3px rgba(161, 157, 161, 0.71);
     border-radius: 3px;
+}
+.lastActivity {
+    font-size: 14px;
+    position: absolute;
+    border-radius: 10px 10px 0 0;
+    padding: 2px 5px;
+    background-color: #c4c4c46c;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    border-left: 2px solid #cfcfcf;
+    border-right: 2px solid #cfcfcf;
+    border-top: 2px solid #cfcfcf;
 }
 /* Message */
 .message {

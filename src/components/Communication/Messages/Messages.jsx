@@ -12,7 +12,7 @@ const Messages = () => {
   return (
     <div className={styles.messages}>
       <MessagesHeader {...dialog} />
-      <MessagesBlock dialog={dialog} />
+      <MessagesBlock {...dialog} />
       {location === `/complected/messages/${dialog.id}` ? (
         <div className={styles.complectedDialogText}>
           <p>
