@@ -3,6 +3,7 @@ import {
   FETCH_DIALOGS_REQUEST,
   FETCH_DIALOGS_SUCCESS,
   SET_DIALOG_IN_ACTIVE,
+  SET_DIALOG_IN_SAVED,
   SET_DIALOGS_ACTIVE,
   SET_DIALOGS_COMPLECTED,
   SET_DIALOGS_GET_START,
@@ -26,4 +27,5 @@ export const dialogsActions = {
   }),
 
   setDialogInActive: (obj) => ({ type: SET_DIALOG_IN_ACTIVE, obj }),
+  setDialogInSaved: (obj) => ({ type: SET_DIALOG_IN_SAVED, obj }),
 };

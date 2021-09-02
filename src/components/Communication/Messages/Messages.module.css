@@ -18,11 +18,34 @@
     font-weight: 700;
     box-shadow: 0 5px 7px -5px rgba(139, 151, 161, 0.54);
     display: grid;
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 6fr 4fr;
     grid-template-rows: 1fr;
 }
 .header div:nth-child(1) {
     padding: 5px 0 0 10px;
+}
+.header div:nth-child(2) {
+    padding: 20px 5px 0 0 ;
+}
+.btnHeader {
+    padding: 5px 7px;
+    font-weight: 550;
+    float: right;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #7e4fffb3;
+    border-radius: 5px;
+}
+.btnHeader:hover {
+    transition: .5s;
+    box-shadow: 0 0 5px 5px rgba(62, 60, 253, 0.2);
+}
+.btnHeaderRemove {
+    font-size: 16px;
+}a
+.btnHeaderSaved {
+    font-size: 16px;
 }
 .messagesBlock {
     padding: 5px 0;

@@ -10,6 +10,7 @@ import loginGithubWatch from "./authorizationSagas/loginGithubSaga";
 import signOutWatch from "./authorizationSagas/signOutSaga";
 import enterDialogWatch from "./mainSagas/enterDialogSaga";
 import getDialogsWatch from "./mainSagas/dialogsSaga";
+import saveDialogSagaWatch from "./mainSagas/saveDialogSaga";
 
 export default function* rootSaga() {
   yield all([
@@ -23,5 +24,6 @@ export default function* rootSaga() {
     signOutWatch(),
     getDialogsWatch(),
     enterDialogWatch(),
+    saveDialogSagaWatch(),
   ]);
 }

@@ -9,7 +9,7 @@ const Messages = () => {
   const dialog = useDialog();
   return (
     <div className={styles.messages}>
-      <MessagesHeader name={dialog.name} />
+      <MessagesHeader {...dialog} />
       <MessagesBlock dialog={dialog} />
       <MessagesWrite />
     </div>
