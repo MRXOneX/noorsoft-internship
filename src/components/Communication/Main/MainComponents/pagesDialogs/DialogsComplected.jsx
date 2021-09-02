@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
+
 import { useDataDialogsComplected } from "../../../../../redux/selectors";
 import Dialog from "../Dialog/Dialog";
 
 import styles from "../../Main.module.css";
-import { Link } from "react-router-dom";
 
 const DialogsComplected = ({ onOpenMessages }) => {
   const dataComplected = useDataDialogsComplected();

@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch } from "react-redux";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 import Title from "../../../utils/Title";
 import { useHandleOutSideClick } from "../../../utils/handleOutSideClick";

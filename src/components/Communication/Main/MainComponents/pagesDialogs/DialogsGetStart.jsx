@@ -1,12 +1,12 @@
+import { useDispatch } from "react-redux";
+
 import { useDataDialogsGetStart } from "../../../../../redux/selectors";
 import Dialog from "../Dialog/Dialog";
-
-import { useDispatch } from "react-redux";
+import { dialogActions } from "../../../../../redux/actions/messagesActions/dialogAction";
 import { dialogsActions } from "../../../../../redux/actions/mainActions/dialogsActions";
 import history from "../../../../../history";
 
 import styles from "../../Main.module.css";
-import { dialogActions } from "../../../../../redux/actions/messagesActions/dialogAction";
 
 const DialogsGetStart = () => {
   const dataGetStart = useDataDialogsGetStart();
