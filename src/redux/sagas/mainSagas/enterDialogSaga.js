@@ -7,7 +7,6 @@ import { dialogsActions } from "../../actions/mainActions/dialogsActions";
 import { reduxSagaFirebase } from "../../../index";
 
 function* enterDialog(action) {
-  console.log(action);
   yield call(reduxSagaFirebase.database.update, `/dialogs/${action.obj.id}`, {
     id: action.obj.id,
     name: action.obj.name,
