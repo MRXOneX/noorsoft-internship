@@ -82,6 +82,15 @@
     grid-template-rows: 1fr;
     grid-template-columns: 50px 1fr 60px;
 }
+.avatar {
+    border-radius: 5px;
+    background: rgba(146, 143, 253);
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-weight: 550;
+    text-align: center
+}
 .text {
     font-size: 12px;
 }
