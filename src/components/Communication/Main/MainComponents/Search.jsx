@@ -2,8 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef } from "react";
 
 import {
-  useActiveInputSearch,
-  useInputValueSearch,
+  useActiveInputSearchSelector,
+  useInputValueSearchSelector,
 } from "../../../../redux/selectors";
 
 import styles from "../Main.module.css";
@@ -13,8 +13,8 @@ import { useHandleOutSideClick } from "../../../utils/handleOutSideClick";
 
 const Search = () => {
   const dispatch = useDispatch();
-  const activeSearchInput = useActiveInputSearch();
-  const inputValueSearch = useInputValueSearch();
+  const activeSearchInput = useActiveInputSearchSelector();
+  const inputValueSearch = useInputValueSearchSelector();
 
   const setActiveInputSearch = (value) => {
     dispatch(mainActions.setActiveInputSearch(value));

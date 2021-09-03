@@ -4,7 +4,7 @@ import { useRef } from "react";
 
 import Title from "../../../utils/Title";
 import { useHandleOutSideClick } from "../../../utils/handleOutSideClick";
-import { useVisiblePopup } from "../../../../redux/selectors";
+import { useVisiblePopupSelector } from "../../../../redux/selectors";
 
 import styles from "../Main.module.css";
 import { mainActions } from "../../../../redux/actions/mainActions/mainActions";
@@ -13,7 +13,7 @@ import { signOutActions } from "../../../../redux/actions/authorizationActions/s
 const Header = () => {
   const dispatch = useDispatch();
 
-  const visiblePopup = useVisiblePopup(null);
+  const visiblePopup = useVisiblePopupSelector(null);
   const toggleVisiblePopup = () => {
     dispatch(mainActions.setVisiblePopup(!visiblePopup));
   };

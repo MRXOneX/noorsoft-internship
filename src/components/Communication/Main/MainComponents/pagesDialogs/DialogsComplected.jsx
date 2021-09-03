@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 
 import {
-  useDataDialogsComplected,
-  useInputValueSearch,
+  useDataDialogsComplectedSelector,
+  useInputValueSearchSelector,
 } from "../../../../../redux/selectors";
 import Dialog from "../Dialog/Dialog";
 
 import styles from "../../Main.module.css";
 
 const DialogsComplected = ({ onOpenMessages }) => {
-  const dataComplected = useDataDialogsComplected();
+  const dataComplected = useDataDialogsComplectedSelector();
 
-  const valueSearchInput = useInputValueSearch();
+  const valueSearchInput = useInputValueSearchSelector();
   const searchData = dataComplected.filter((item) =>
     item.name.toLowerCase().includes(valueSearchInput.toLowerCase())
   );

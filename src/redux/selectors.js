@@ -12,29 +12,30 @@ export const useRegistrationSelector = () =>
 
 //----------------------mainReducer----------------------//
 
-export const useVisiblePopup = () =>
+export const useVisiblePopupSelector = () =>
   useSelector(({ main }) => main.visiblePopup);
 
-export const useActiveInputSearch = () =>
+export const useActiveInputSearchSelector = () =>
   useSelector(({ main }) => main.activeInputSearch);
 
-export const useInputValueSearch = () =>
+export const useInputValueSearchSelector = () =>
   useSelector(({ main }) => main.inputValueSearch);
 
 //----------------------dialogsReducer----------------------//
 
-export const useDataDialogsGetStart = () =>
+export const useDataDialogsGetStartSelector = () =>
   useSelector(({ dialogs }) => dialogs.dataDialogsGetStart);
 
-export const useDataDialogsActive = () =>
+export const useDataDialogsActiveSelector = () =>
   useSelector(({ dialogs }) => dialogs.dataDialogsActive);
 
-export const useDataDialogsSaved = () =>
+export const useDataDialogsSavedSelector = () =>
   useSelector(({ dialogs }) => dialogs.dataDialogsSaved);
 
-export const useDataDialogsComplected = () =>
+export const useDataDialogsComplectedSelector = () =>
   useSelector(({ dialogs }) => dialogs.dataDialogsComplected);
 
 //----------------------dialogReducer----------------------//
 
-export const useDialog = () => useSelector(({ dialog }) => dialog.dialog);
+export const useDialogSelector = () =>
+  useSelector(({ dialog }) => dialog.dialog);
