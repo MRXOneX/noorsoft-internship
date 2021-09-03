@@ -14,18 +14,20 @@ const initialState = {
   dataDialogsSaved: null,
   dataDialogsComplected: null,
 
-  dialogsResponse: "ошибка",
+  dialogsLoading: false,
+  dialogsSuccess: false,
+  dialogsError: null,
 };
 const dialogsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DIALOGS_REQUEST:
-      return { ...state, dialogsResponse: "запрос" };
+      return { ...state, dialogsLoading: true };
 
     case FETCH_DIALOGS_SUCCESS:
-      return { ...state, dialogsResponse: "данные успешно полученны" };
+      return { ...state, dialogsSuccess: true };
 
     case FETCH_DIALOGS_FAILURE:
-      return { ...state, dialogsResponse: action.error };
+      return { ...state, dialogsError: action.error };
 
     case SET_DIALOGS_GET_START:
       return { ...state, dataDialogsGetStart: action.dataGetStart };

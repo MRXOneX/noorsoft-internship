@@ -7,7 +7,9 @@ import {
 
 const initialState = {
   user: null,
-  signOut: null,
+  signOutLoading: false,
+  signOutSuccess: false,
+  signOutError: null,
 };
 
 const authReducer = (state = initialState, action) => {
@@ -16,11 +18,11 @@ const authReducer = (state = initialState, action) => {
       return { ...state, user: action.user };
 
     case FETCH_OUT_REQUEST:
-      return { ...state, signOut: "запрос" };
+      return { ...state, signOutLoading: true };
     case FETCH_OUT_SUCCESS:
-      return { ...state, signOut: "успешно" };
+      return { ...state, signOutSuccess: true };
     case FETCH_OUT_FAILURE:
-      return { ...state, signOut: action.error };
+      return { ...state, signOutError: action.error };
 
     default:
       return state;

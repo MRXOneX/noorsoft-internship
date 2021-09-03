@@ -5,17 +5,19 @@ import {
 } from "../../constans/authorizationConstans/forgotPasswordConstans";
 
 const initialState = {
-  forgotPassword: null,
+  forgotPasswordLoading: false,
+  forgotPasswordSuccess: false,
+  forgotPasswordError: null,
 };
 
 const forgotPasswordReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_FORGOTPASSWORD_REQUEST:
-      return { ...state, forgotPassword: "запрос" };
+      return { ...state, forgotPasswordLoading: true };
     case FETCH_FORGOTPASSWORD_SUCCESS:
-      return { ...state, forgotPassword: "успешно" };
+      return { ...state, forgotPasswordSuccess: true };
     case FETCH_FORGOTPASSWORD_FAILURE:
-      return { ...state, forgotPassword: action.error };
+      return { ...state, forgotPasswordError: action.error };
     default:
       return state;
   }
