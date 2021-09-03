@@ -8,8 +8,6 @@ import Title from "../../../utils/Title";
 
 import styles from "../Messages.module.css";
 
-
-
 const MessagesHeader = ({ name, id, status }) => {
   const location = window.location.pathname;
 
@@ -29,7 +27,7 @@ const MessagesHeader = ({ name, id, status }) => {
         <Title title={name} showHr={false} size={28} />
       </div>
       <div>
-        {location === `/saved/messages/${id}` && (
+        {location.includes("/saved") && (
           <button
             onClick={() => onClickDialogInActive({ id, name, status })}
             className={`${styles.btnHeader} ${styles.btnHeaderRemove}`}
@@ -37,7 +35,7 @@ const MessagesHeader = ({ name, id, status }) => {
             Удалить из сохраненных
           </button>
         )}
-        {location === `/active/messages/${id}` && (
+        {location.includes("/active") && (
           <button
             onClick={() => onClickDialogInSaved({ id, name, status })}
             className={`${styles.btnHeader} ${styles.btnHeaderSaved}`}
