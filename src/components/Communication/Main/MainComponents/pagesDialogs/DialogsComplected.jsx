@@ -9,10 +9,10 @@ import Dialog from "../Dialog/Dialog";
 import styles from "../../Main.module.css";
 
 const DialogsComplected = ({ onOpenMessages }) => {
-  const dataComplected = useDataDialogsComplectedSelector();
+  const dataDialogsComplected = useDataDialogsComplectedSelector();
 
   const valueSearchInput = useInputValueSearchSelector();
-  const searchData = dataComplected.filter((item) =>
+  const searchData = dataDialogsComplected.filter((item) =>
     item.name.toLowerCase().includes(valueSearchInput.toLowerCase())
   );
   return (
