@@ -13,6 +13,7 @@ import styles from "../../Main.module.css";
 
 const DialogsGetStart = () => {
   const dataDialogsGetStart = useDataDialogsGetStart();
+  const valueSearchInput = useInputValueSearch();
 
   const dispatch = useDispatch();
   const onClickDialogInActive = (obj) => {
@@ -21,7 +22,6 @@ const DialogsGetStart = () => {
     history.push(`/active/messages/${obj.id}`);
   };
 
-  const valueSearchInput = useInputValueSearch();
   const searchData = dataDialogsGetStart.filter((item) =>
     item.name.toLowerCase().includes(valueSearchInput.toLowerCase())
   );

@@ -13,6 +13,7 @@ import { useHandleOutSideClick } from "../../../utils/handleOutSideClick";
 
 const Search = () => {
   const dispatch = useDispatch();
+
   const activeSearchInput = useActiveInputSearchSelector();
   const inputValueSearch = useInputValueSearchSelector();
 

@@ -8,7 +8,9 @@ import styles from "./Messages.module.css";
 
 const Messages = () => {
   const location = window.location.pathname;
+
   const dialog = useDialogSelector();
+
   return (
     <div className={styles.messages}>
       <MessagesHeader {...dialog} />

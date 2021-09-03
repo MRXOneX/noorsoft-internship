@@ -21,6 +21,7 @@ const Header = () => {
   const setVisiblePopup = (value) => {
     dispatch(mainActions.setVisiblePopup(value));
   };
+
   const visiblePopupSideClick = useRef(null);
   useHandleOutSideClick(visiblePopupSideClick, setVisiblePopup);
 

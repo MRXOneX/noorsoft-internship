@@ -10,8 +10,8 @@ import styles from "../../Main.module.css";
 
 const DialogsComplected = ({ onOpenMessages }) => {
   const dataDialogsComplected = useDataDialogsComplectedSelector();
-
   const valueSearchInput = useInputValueSearchSelector();
+
   const searchData = dataDialogsComplected.filter((item) =>
     item.name.toLowerCase().includes(valueSearchInput.toLowerCase())
   );
