@@ -1,7 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { Link } from "react-router-dom";
 
 import styles from "../Main.module.css";
+
+
 
 const Navbar = () => {
   return (

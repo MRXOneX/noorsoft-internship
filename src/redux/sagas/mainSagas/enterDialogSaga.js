@@ -1,7 +1,10 @@
 import { call, put, takeLatest } from "redux-saga/effects";
-import { reduxSagaFirebase } from "../../../index";
+
 import { SET_DIALOG_IN_ACTIVE } from "../../constans/mainConstans/dialogsConstans";
+
 import { dialogsActions } from "../../actions/mainActions/dialogsActions";
+
+import { reduxSagaFirebase } from "../../../index";
 
 function* enterDialog(action) {
   console.log(action);

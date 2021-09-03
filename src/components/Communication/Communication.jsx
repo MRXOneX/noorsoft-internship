@@ -3,10 +3,14 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 
 import { mainActions } from "../../redux/actions/mainActions/mainActions";
+
 import Messages from "./Messages/Messages";
+
 import Main from "./Main/Main";
 
 import "./Communication.css";
+
+
 
 const Communication = ({ user }) => {
   const dispatch = useDispatch();

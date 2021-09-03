@@ -1,5 +1,7 @@
 import styles from "../Dialog.module.css";
 
+
+
 const NameUser = ({ name }) => {
   return (
     <div className={styles.name}>

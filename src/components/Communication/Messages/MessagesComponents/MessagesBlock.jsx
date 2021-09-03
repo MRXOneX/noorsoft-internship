@@ -1,7 +1,10 @@
-import Message from "./Message/Message";
 import moment from "moment";
 
+import Message from "./Message/Message";
+
 import styles from "../Messages.module.css";
+
+
 
 const MessagesBlock = () => {
   const lastActivity = moment().format("lll");

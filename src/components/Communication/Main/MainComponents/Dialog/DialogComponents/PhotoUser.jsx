@@ -2,6 +2,8 @@ import Title from "../../../../../utils/Title";
 
 import styles from "../Dialog.module.css";
 
+
+
 const PhotoUser = ({ name }) => {
   return (
     <div className={styles.iconUser}>

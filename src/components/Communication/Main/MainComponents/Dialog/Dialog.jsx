@@ -1,8 +1,10 @@
+import CountMessages from "./DialogComponents/CountMessages";
 import PhotoUser from "./DialogComponents/PhotoUser";
 import NameUser from "./DialogComponents/NameUser";
-import CountMessages from "./DialogComponents/CountMessages";
 
 import styles from "./Dialog.module.css";
+
+
 
 const Dialog = ({ name }) => {
   return (

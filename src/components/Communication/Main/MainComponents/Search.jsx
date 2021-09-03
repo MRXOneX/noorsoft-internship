@@ -1,4 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { useDispatch } from "react-redux";
 import { useRef } from "react";
 
 import {
@@ -7,10 +9,12 @@ import {
 } from "../../../../redux/selectors";
 
 import { mainActions } from "../../../../redux/actions/mainActions/mainActions";
-import { useDispatch } from "react-redux";
+
 import useHandleOutsideClick from "../../../utils/handleOutsideClick";
 
 import styles from "../Main.module.css";
+
+
 
 const Search = () => {
   const dispatch = useDispatch();

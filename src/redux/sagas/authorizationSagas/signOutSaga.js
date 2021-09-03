@@ -1,9 +1,13 @@
 import { call, put, takeLatest } from "redux-saga/effects";
 
 import { FETCH_OUT_REQUEST } from "../../constans/authorizationConstans/signOutConstans";
+
 import { signOutActions } from "../../actions/authorizationActions/signOutAction";
 import { authActions } from "../../actions/authorizationActions/authActions";
+
 import { reduxSagaFirebase } from "../../../index";
+
+
 
 function* signOut() {
   try {

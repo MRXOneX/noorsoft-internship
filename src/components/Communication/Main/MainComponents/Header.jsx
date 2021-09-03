@@ -1,15 +1,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { useDispatch } from "react-redux";
 import { useRef } from "react";
 
-import Title from "../../../utils/Title";
 import useHandleOutsideClick from "../../../utils/handleOutsideClick";
+import Title from "../../../utils/Title";
+
 import { useVisiblePopupSelector } from "../../../../redux/selectors";
 
-import { mainActions } from "../../../../redux/actions/mainActions/mainActions";
 import { signOutActions } from "../../../../redux/actions/authorizationActions/signOutAction";
+import { mainActions } from "../../../../redux/actions/mainActions/mainActions";
 
 import styles from "../Main.module.css";
+
+
 
 const Header = () => {
   const dispatch = useDispatch();

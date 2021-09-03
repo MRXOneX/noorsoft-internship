@@ -4,9 +4,12 @@ import {
   useDataDialogsActiveSelector,
   useInputValueSearchSelector,
 } from "../../../../../redux/selectors";
+
 import Dialog from "../Dialog/Dialog";
 
 import styles from "../../Main.module.css";
+
+
 
 const DialogsActive = ({ onOpenMessages }) => {
   const dataDialogsActive = useDataDialogsActiveSelector();

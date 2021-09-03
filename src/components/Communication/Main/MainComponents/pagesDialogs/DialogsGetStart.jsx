@@ -4,12 +4,17 @@ import {
   useDataDialogsGetStartSelector,
   useInputValueSearchSelector,
 } from "../../../../../redux/selectors";
+
 import Dialog from "../Dialog/Dialog";
+
 import { dialogActions } from "../../../../../redux/actions/messagesActions/dialogAction";
 import { dialogsActions } from "../../../../../redux/actions/mainActions/dialogsActions";
+
 import history from "../../../../../history";
 
 import styles from "../../Main.module.css";
+
+
 
 const DialogsGetStart = () => {
   const dataDialogsGetStart = useDataDialogsGetStartSelector();

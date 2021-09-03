@@ -4,6 +4,8 @@ import Time from "./MessageComponents/Time";
 
 import styles from "../../Messages.module.css";
 
+
+
 const Message = () => {
   const text = "Hello bro, how are you";
   const name = "Misha Poleshchenkov";

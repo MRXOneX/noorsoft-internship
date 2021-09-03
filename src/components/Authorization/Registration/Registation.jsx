@@ -2,9 +2,12 @@ import { Redirect } from "react-router-dom";
 
 import { FormRegistration } from "../utilsAuth/FormsAuth/index";
 import LinksAuth from "../utilsAuth/LinksAuth";
+
 import Title from "../../utils/Title";
 
 import style from "./Registration.module.css";
+
+
 
 const Registration = ({ user }) => {
   if (user) return <Redirect to="/" />;

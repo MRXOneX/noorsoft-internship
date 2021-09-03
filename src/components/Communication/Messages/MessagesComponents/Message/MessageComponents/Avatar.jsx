@@ -2,6 +2,8 @@ import Title from "../../../../../utils/Title";
 
 import styles from "../../../Messages.module.css";
 
+
+
 const Avatar = ({ name }) => {
   return (
     <div className={styles.avatar}>

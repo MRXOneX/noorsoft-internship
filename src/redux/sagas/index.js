@@ -8,6 +8,7 @@ import authChangedWatch from "./authorizationSagas/authChangedSaga";
 import loginGoogleWatch from "./authorizationSagas/loginGoogleSaga";
 import loginGithubWatch from "./authorizationSagas/loginGithubSaga";
 import signOutWatch from "./authorizationSagas/signOutSaga";
+
 import enterDialogWatch from "./mainSagas/enterDialogSaga";
 import getDialogsWatch from "./mainSagas/dialogsSaga";
 import saveDialogSagaWatch from "./mainSagas/saveDialogSaga";
