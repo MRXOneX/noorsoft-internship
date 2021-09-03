@@ -1,15 +1,11 @@
 import { Link } from "react-router-dom";
 
-import {
-  useDataDialogsSavedSelector,
-  useInputValueSearchSelector,
-} from "../../../../../redux/selectors";
+import { useInputValueSearchSelector } from "../../../../../redux/selectors/mainSelectors";
+import { useDataDialogsSavedSelector } from "../../../../../redux/selectors/dialogsSelectors";
 
 import Dialog from "../Dialog/Dialog";
 
 import styles from "../../Main.module.css";
-
-
 
 const DialogsSaved = ({ onOpenMessages }) => {
   const dataDialogsSaved = useDataDialogsSavedSelector();

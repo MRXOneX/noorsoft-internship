@@ -2,12 +2,9 @@ import MessagesHeader from "./MessagesComponents/MessagesHeader";
 import MessagesBlock from "./MessagesComponents/MessagesBlock";
 import MessagesWrite from "./MessagesComponents/MessagesWrite";
 
-import { useDialogSelector } from "../../../redux/selectors";
+import { useDialogSelector } from "../../../redux/selectors/dialogSelectors";
 
 import styles from "./Messages.module.css";
-
-
-
 
 const Messages = () => {
   const location = window.location.pathname;

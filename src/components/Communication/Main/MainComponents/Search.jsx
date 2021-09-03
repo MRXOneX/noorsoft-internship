@@ -6,15 +6,13 @@ import { useRef } from "react";
 import {
   useActiveInputSearchSelector,
   useInputValueSearchSelector,
-} from "../../../../redux/selectors";
+} from "../../../../redux/selectors/mainSelectors";
 
 import { mainActions } from "../../../../redux/actions/mainActions/mainActions";
 
 import useHandleOutsideClick from "../../../utils/handleOutsideClick";
 
 import styles from "../Main.module.css";
-
-
 
 const Search = () => {
   const dispatch = useDispatch();

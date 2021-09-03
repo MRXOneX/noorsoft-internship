@@ -13,7 +13,7 @@ import Login from "./components/Authorization/Login/Login";
 import Communication from "./components/Communication/Communication";
 
 import { authActions } from "./redux/actions/authorizationActions/authActions";
-import { useUserSelector } from "./redux/selectors";
+import { useUserSelector } from "./redux/selectors/autorizationSelectors";
 
 import history from "./history";
 

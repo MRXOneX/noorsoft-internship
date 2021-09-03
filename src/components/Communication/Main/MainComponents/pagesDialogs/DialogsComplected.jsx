@@ -1,15 +1,11 @@
 import { Link } from "react-router-dom";
 
-import {
-  useDataDialogsComplectedSelector,
-  useInputValueSearchSelector,
-} from "../../../../../redux/selectors";
+import { useInputValueSearchSelector } from "../../../../../redux/selectors/mainSelectors";
+import { useDataDialogsComplectedSelector } from "../../../../../redux/selectors/dialogsSelectors";
 
 import Dialog from "../Dialog/Dialog";
 
 import styles from "../../Main.module.css";
-
-
 
 const DialogsComplected = ({ onOpenMessages }) => {
   const dataDialogsComplected = useDataDialogsComplectedSelector();

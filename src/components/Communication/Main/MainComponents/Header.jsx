@@ -6,14 +6,12 @@ import { useRef } from "react";
 import useHandleOutsideClick from "../../../utils/handleOutsideClick";
 import Title from "../../../utils/Title";
 
-import { useVisiblePopupSelector } from "../../../../redux/selectors";
+import { useVisiblePopupSelector } from "../../../../redux/selectors/mainSelectors";
 
 import { signOutActions } from "../../../../redux/actions/authorizationActions/signOutAction";
 import { mainActions } from "../../../../redux/actions/mainActions/mainActions";
 
 import styles from "../Main.module.css";
-
-
 
 const Header = () => {
   const dispatch = useDispatch();
