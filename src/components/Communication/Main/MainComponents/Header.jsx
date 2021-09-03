@@ -6,9 +6,10 @@ import Title from "../../../utils/Title";
 import { useHandleOutSideClick } from "../../../utils/handleOutSideClick";
 import { useVisiblePopupSelector } from "../../../../redux/selectors";
 
-import styles from "../Main.module.css";
 import { mainActions } from "../../../../redux/actions/mainActions/mainActions";
 import { signOutActions } from "../../../../redux/actions/authorizationActions/signOutAction";
+
+import styles from "../Main.module.css";
 
 const Header = () => {
   const dispatch = useDispatch();

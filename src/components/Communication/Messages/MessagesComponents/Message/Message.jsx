@@ -1,8 +1,10 @@
 import Avatar from "./MessageComponents/Avatar";
 import Text from "./MessageComponents/Text";
 
-import styles from "../../Messages.module.css";
 import Time from "./MessageComponents/Time";
+
+import styles from "../../Messages.module.css";
+
 const Message = () => {
   return (
     <div className={styles.message}>

@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
 
 import {
-  useDataDialogsGetStart,
-  useInputValueSearch,
+  useDataDialogsGetStartSelector,
+  useInputValueSearchSelector,
 } from "../../../../../redux/selectors";
 import Dialog from "../Dialog/Dialog";
 import { dialogActions } from "../../../../../redux/actions/messagesActions/dialogAction";
@@ -12,8 +12,8 @@ import history from "../../../../../history";
 import styles from "../../Main.module.css";
 
 const DialogsGetStart = () => {
-  const dataDialogsGetStart = useDataDialogsGetStart();
-  const valueSearchInput = useInputValueSearch();
+  const dataDialogsGetStart = useDataDialogsGetStartSelector();
+  const valueSearchInput = useInputValueSearchSelector();
 
   const dispatch = useDispatch();
   const onClickDialogInActive = (obj) => {
