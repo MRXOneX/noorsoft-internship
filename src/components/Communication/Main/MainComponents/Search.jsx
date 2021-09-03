@@ -33,7 +33,7 @@ const Search = () => {
     <div
       ref={activeInputSearchRef}
       onClick={() => setActiveInputSearch(true)}
-      className={`${activeSearchInput ? styles.opacity1 : styles.opacity7} ${
+      className={`${activeSearchInput ? styles.active : styles.noActive} ${
         styles.search
       }`}
     >
