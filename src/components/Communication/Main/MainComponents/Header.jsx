@@ -1,19 +1,22 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { useDispatch } from "react-redux";
 import { useRef } from "react";
 
+import useHandleOutsideClick from "../../../utils/handleOutsideClick";
 import Title from "../../../utils/Title";
-import { useHandleOutSideClick } from "../../../utils/handleOutSideClick";
-import { useVisiblePopup } from "../../../../redux/selectors";
+
+import { useVisiblePopupSelector } from "../../../../redux/selectors/mainSelectors";
+
+import { signOutActions } from "../../../../redux/actions/authorizationActions/signOutAction";
+import { mainActions } from "../../../../redux/actions/mainActions/mainActions";
 
 import styles from "../Main.module.css";
-import { mainActions } from "../../../../redux/actions/mainActions/mainActions";
-import { signOutActions } from "../../../../redux/actions/authorizationActions/signOutAction";
 
 const Header = () => {
   const dispatch = useDispatch();
 
-  const visiblePopup = useVisiblePopup(null);
+  const visiblePopup = useVisiblePopupSelector(null);
   const toggleVisiblePopup = () => {
     dispatch(mainActions.setVisiblePopup(!visiblePopup));
   };
@@ -21,8 +24,9 @@ const Header = () => {
   const setVisiblePopup = (value) => {
     dispatch(mainActions.setVisiblePopup(value));
   };
+
   const visiblePopupSideClick = useRef(null);
-  useHandleOutSideClick(visiblePopupSideClick, setVisiblePopup);
+  useHandleOutsideClick(visiblePopupSideClick, setVisiblePopup);
 
   return (
     <div className={styles.header} ref={visiblePopupSideClick}>

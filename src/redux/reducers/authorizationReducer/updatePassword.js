@@ -5,16 +5,18 @@ import {
 } from "../../constans/authorizationConstans/updatePasswordConstans";
 
 const initialState = {
-  updatePassword: null,
+  updatePasswordLoading: false,
+  updatePasswordSuccess: false,
+  updatePasswordError: null,
 };
 const updatePassword = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_UPDATEPASSWORD_REQUEST:
-      return { ...state, updatePassword: "запрос" };
+      return { ...state, updatePasswordLoading: true };
     case FETCH_UPDATEPASSWORD_SUCCESS:
-      return { ...state, updatePassword: "Пароль успешно сменен" };
+      return { ...state, updatePasswordSuccess: true };
     case FETCH_UPDATEPASSWORD_FAILURE:
-      return { ...state, updatePassword: `ошибка ${action.error}` };
+      return { ...state, updatePasswordError: action.error };
     default:
       return state;
   }

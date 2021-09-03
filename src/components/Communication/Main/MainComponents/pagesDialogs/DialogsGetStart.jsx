@@ -1,18 +1,20 @@
 import { useDispatch } from "react-redux";
 
-import {
-  useDataDialogsGetStart,
-  useInputValueSearch,
-} from "../../../../../redux/selectors";
+import { useInputValueSearchSelector } from "../../../../../redux/selectors/mainSelectors";
+import { useDataDialogsGetStartSelector } from "../../../../../redux/selectors/dialogsSelectors";
+
 import Dialog from "../Dialog/Dialog";
+
 import { dialogActions } from "../../../../../redux/actions/messagesActions/dialogAction";
 import { dialogsActions } from "../../../../../redux/actions/mainActions/dialogsActions";
+
 import history from "../../../../../history";
 
 import styles from "../../Main.module.css";
 
 const DialogsGetStart = () => {
-  const dataGetStart = useDataDialogsGetStart();
+  const dataDialogsGetStart = useDataDialogsGetStartSelector();
+  const valueSearchInput = useInputValueSearchSelector();
 
   const dispatch = useDispatch();
   const onClickDialogInActive = (obj) => {
@@ -21,8 +23,7 @@ const DialogsGetStart = () => {
     history.push(`/active/messages/${obj.id}`);
   };
 
-  const valueSearchInput = useInputValueSearch();
-  const searchData = dataGetStart.filter((item) =>
+  const searchData = dataDialogsGetStart.filter((item) =>
     item.name.toLowerCase().includes(valueSearchInput.toLowerCase())
   );
 

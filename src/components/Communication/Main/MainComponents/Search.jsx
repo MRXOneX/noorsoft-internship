@@ -1,27 +1,31 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { useDispatch } from "react-redux";
 import { useRef } from "react";
 
 import {
-  useActiveInputSearch,
-  useInputValueSearch,
-} from "../../../../redux/selectors";
+  useActiveInputSearchSelector,
+  useInputValueSearchSelector,
+} from "../../../../redux/selectors/mainSelectors";
+
+import { mainActions } from "../../../../redux/actions/mainActions/mainActions";
+
+import useHandleOutsideClick from "../../../utils/handleOutsideClick";
 
 import styles from "../Main.module.css";
-import { mainActions } from "../../../../redux/actions/mainActions/mainActions";
-import { useDispatch } from "react-redux";
-import { useHandleOutSideClick } from "../../../utils/handleOutSideClick";
 
 const Search = () => {
   const dispatch = useDispatch();
-  const activeSearchInput = useActiveInputSearch();
-  const inputValueSearch = useInputValueSearch();
+
+  const activeSearchInput = useActiveInputSearchSelector();
+  const inputValueSearch = useInputValueSearchSelector();
 
   const setActiveInputSearch = (value) => {
     dispatch(mainActions.setActiveInputSearch(value));
   };
 
   const activeInputSearchRef = useRef(null);
-  useHandleOutSideClick(activeInputSearchRef, setActiveInputSearch);
+  useHandleOutsideClick(activeInputSearchRef, setActiveInputSearch);
 
   const onChangeInputValueSearch = (e) => {
     dispatch(mainActions.setInputValueSearch(e.target.value));
@@ -31,7 +35,7 @@ const Search = () => {
     <div
       ref={activeInputSearchRef}
       onClick={() => setActiveInputSearch(true)}
-      className={`${activeSearchInput ? styles.opacity1 : styles.opacity7} ${
+      className={`${activeSearchInput ? styles.active : styles.noActive} ${
         styles.search
       }`}
     >

@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+
+
 const LinksAuth = ({ linkOne, linkTwo, nameOne, nameTwo }) => {
   return (
     <>

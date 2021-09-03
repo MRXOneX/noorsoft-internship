@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export const useHandleOutSideClick = (ref, func) => {
+const useHandleOutsideClick = (ref, func) => {
   const outSideClick = (e) => {
     const path = e.path || (e.composedPath && e.composedPath());
     if (!path.includes(ref.current)) {
@@ -15,3 +15,4 @@ export const useHandleOutSideClick = (ref, func) => {
     };
   }, []);
 };
+export default useHandleOutsideClick;

@@ -1,7 +1,9 @@
 import { call, put, takeEvery } from "redux-saga/effects";
+
 import firebase from "firebase";
 
 import { FETCH_USER_REQUEST } from "../../constans/authorizationConstans/authConstans";
+
 import { authActions } from "../../actions/authorizationActions/authActions";
 
 function onAuthStateChanged() {

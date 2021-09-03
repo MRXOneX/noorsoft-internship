@@ -1,9 +1,14 @@
 import { Button, Input } from "reactstrap";
+
 import { useDispatch } from "react-redux";
+
 import { useFormik } from "formik";
+
 import * as yup from "yup";
 
 import { registrationActions } from "../../../../redux/actions/authorizationActions/registrationActions";
+
+
 
 const FormRegistration = () => {
   const dispatch = useDispatch();

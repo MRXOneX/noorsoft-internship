@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+
 import { Redirect } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
@@ -8,11 +9,16 @@ import {
   loginGithubActions,
   loginGoogleActions,
 } from "../../../redux/actions/authorizationActions/loginActions";
+
 import { FormLogin } from "../utilsAuth/FormsAuth/index";
 import LinksAuth from "../utilsAuth/LinksAuth";
+
 import Title from "../../utils/Title";
 
 import style from "./Login.module.css";
+
+
+
 
 library.add(fab);
 const Login = ({ user }) => {

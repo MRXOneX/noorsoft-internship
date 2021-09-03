@@ -108,25 +108,9 @@
     width: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.opacity1 {
+.active {
     opacity: 1;
 }
-.opacity7 {
+.noActive {
     opacity: .7;
 }

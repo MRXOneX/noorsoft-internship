@@ -1,12 +1,17 @@
 import { call, put, takeLatest } from "redux-saga/effects";
+
 import { toast } from "react-toastify";
 
 import { FETCH_EMAIL_REQUEST } from "../../constans/authorizationConstans/loginConstans";
+
 import { loginEmailActions } from "../../actions/authorizationActions/loginActions";
 import { authActions } from "../../actions/authorizationActions/authActions";
+
 import { reduxSagaFirebase } from "../../../index";
 
 import "react-toastify/dist/ReactToastify.min.css";
+
+
 
 const notifyLogin = () => toast("Успешно авторизовались");
 

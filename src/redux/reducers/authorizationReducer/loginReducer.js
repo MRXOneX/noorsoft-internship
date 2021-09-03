@@ -11,33 +11,41 @@ import {
 } from "../../constans/authorizationConstans/loginConstans";
 
 const initialState = {
-  loginEmail: null,
-  loginGoogle: null,
-  loginGithub: null,
+  loginEmailLoading: false,
+  loginEmailSuccess: false,
+  loginEmailError: null,
+
+  loginGoogleLoading: false,
+  loginGoogleSuccess: false,
+  loginGoogleError: null,
+
+  loginGithubLoading: false,
+  loginGithubSuccess: false,
+  loginGithubError: null,
 };
 
 const loginReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_EMAIL_REQUEST:
-      return { ...state, loginEmail: "запрос" };
+      return { ...state, loginEmailLoading: true };
     case FETCH_EMAIL_SUCCESS:
-      return { ...state, loginEmail: "успешно" };
+      return { ...state, loginEmailSuccess: true };
     case FETCH_EMAIL_FAILURE:
-      return { ...state, loginEmail: action.error };
+      return { ...state, loginEmailError: action.error };
 
     case FETCH_GOOGLE_REQUEST:
-      return { ...state, loginGoogle: "запрос" };
+      return { ...state, loginGoogleLoading: true };
     case FETCH_GOOGLE_SUCCESS:
-      return { ...state, loginGoogle: "успешно" };
+      return { ...state, loginGoogleSuccess: true };
     case FETCH_GOOGLE_FAILURE:
-      return { ...state, loginGoogle: action.error };
+      return { ...state, loginGoogleError: action.error };
 
     case FETCH_GITHUB_REQUEST:
-      return { ...state, loginGithub: "запрос" };
+      return { ...state, loginGithubLoading: true };
     case FETCH_GITHUB_SUCCESS:
-      return { ...state, loginGithub: "успешно" };
+      return { ...state, loginGithubSuccess: true };
     case FETCH_GITHUB_FAILURE:
-      return { ...state, loginGithub: action.error };
+      return { ...state, loginGithubError: action.error };
     default:
       return state;
   }

@@ -1,9 +1,11 @@
 import styles from "../../../Messages.module.css";
 
-const Time = () => {
+
+
+const Time = ({ time }) => {
   return (
     <div className={styles.time}>
-      <span>Вчера в 20 00</span>
+      <span>{time}</span>
     </div>
   );
 };

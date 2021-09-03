@@ -2,9 +2,12 @@ import { Redirect } from "react-router-dom";
 
 import { FormForgot } from "../utilsAuth/FormsAuth/index";
 import LinksAuth from "../utilsAuth/LinksAuth";
+
 import Title from "../../utils/Title";
 
 import style from "./ForgotPassword.module.css";
+
+
 
 const ForgotPassword = ({ user }) => {
   if (user) return <Redirect to="/" />;
