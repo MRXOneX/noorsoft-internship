@@ -8,7 +8,7 @@ import {
 
 import { mainActions } from "../../../../redux/actions/mainActions/mainActions";
 import { useDispatch } from "react-redux";
-import { useHandleOutSideClick } from "../../../utils/handleOutSideClick";
+import useHandleOutsideClick from "../../../utils/handleOutsideClick";
 
 import styles from "../Main.module.css";
 
@@ -23,7 +23,7 @@ const Search = () => {
   };
 
   const activeInputSearchRef = useRef(null);
-  useHandleOutSideClick(activeInputSearchRef, setActiveInputSearch);
+  useHandleOutsideClick(activeInputSearchRef, setActiveInputSearch);
 
   const onChangeInputValueSearch = (e) => {
     dispatch(mainActions.setInputValueSearch(e.target.value));

@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useRef } from "react";
 
 import Title from "../../../utils/Title";
-import { useHandleOutSideClick } from "../../../utils/handleOutSideClick";
+import useHandleOutsideClick from "../../../utils/handleOutsideClick";
 import { useVisiblePopupSelector } from "../../../../redux/selectors";
 
 import { mainActions } from "../../../../redux/actions/mainActions/mainActions";
@@ -24,7 +24,7 @@ const Header = () => {
   };
 
   const visiblePopupSideClick = useRef(null);
-  useHandleOutSideClick(visiblePopupSideClick, setVisiblePopup);
+  useHandleOutsideClick(visiblePopupSideClick, setVisiblePopup);
 
   return (
     <div className={styles.header} ref={visiblePopupSideClick}>
